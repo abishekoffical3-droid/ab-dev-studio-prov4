@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume & CV | ABISHEK BHUSAL - WEB & APP DEVELOPER</title>
+    
+    <meta name="description" content="View and download the official resume of Abishek Bhusal, Web & App Developer based in Nepal. Explore experience, technical skills, education, and achievements.">
+    <meta name="keywords" content="Abishek Bhusal Resume, Abishek Bhusal CV, Web Developer Resume, App Developer Portfolio Nepal, Software Engineer Resume">
+    <meta name="author" content="Abishek Bhusal">
+    <link rel="canonical" href="https://abishekbhusal.com/resume.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abishekbhusal.com/resume.html">
+    <meta property="og:title" content="Resume & CV | Abishek Bhusal - Web & App Developer">
+    <meta property="og:description" content="Professional CV and qualifications of Abishek Bhusal, specializing in full-stack web engineering and mobile app development.">
+    <meta property="og:image" content="https://abishekbhusal.com/images/og-resume.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://abishekbhusal.com/resume.html">
+    <meta name="twitter:title" content="Resume & CV | Abishek Bhusal - Web & App Developer">
+    <meta name="twitter:description" content="Professional CV and qualifications of Abishek Bhusal, specializing in full-stack web engineering and mobile app development.">
+    <meta name="twitter:image" content="https://abishekbhusal.com/images/og-resume.jpg">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="animations.css">
+
+    <style>
+        .resume-action-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        .resume-paper {
+            background: var(--bg-card);
+            border: 1px solid var(--bg-glass-border);
+            border-radius: var(--border-radius-lg);
+            padding: 3rem;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            margin-bottom: 3rem;
+        }
+        .resume-header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            border-bottom: 1px solid var(--bg-glass-border);
+            padding-bottom: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+        .resume-avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-blue);
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+            flex-shrink: 0;
+        }
+        .resume-grid-two {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+        }
+        .resume-section-title {
+            font-size: 1.25rem;
+            font-family: var(--font-sans);
+            color: var(--text-white);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            border-bottom: 2px solid var(--accent-blue);
+            padding-bottom: 0.5rem;
+            width: max-content;
+        }
+        .timeline-container {
+            position: relative;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--bg-glass-border);
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+        }
+        .timeline-item {
+            position: relative;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: calc(-1.5rem - 6px);
+            top: 0.25rem;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent-blue);
+            box-shadow: 0 0 10px var(--accent-blue);
+        }
+        .timeline-date {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--accent-blue);
+            margin-bottom: 0.25rem;
+        }
+        .timeline-title {
+            font-size: 1.1rem;
+            color: var(--text-white);
+            margin-bottom: 0.25rem;
+        }
+        .timeline-subtitle {
+            font-size: 0.95rem;
+            color: var(--accent-purple);
+            margin-bottom: 0.75rem;
+        }
+        .meta-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        .meta-list i {
+            width: 20px;
+            color: var(--accent-blue);
+        }
+
+        @media (max-width: 992px) {
+            .resume-grid-two {
+                grid-template-columns: 1fr;
+            }
+            .resume-header-flex {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .resume-section-title {
+                width: 100%;
+            }
+        }
+
+        /* Print CSS Rules */
+        @media print {
+            body {
+                background: #ffffff !important;
+                color: #000000 !important;
+            }
+            header, footer, .hero-section, .resume-action-bar, .cta-section, .cursor-dot, .cursor-outline, .mouse-glow, #particles-canvas {
+                display: none !important;
+            }
+            .resume-paper {
+                background: #ffffff !important;
+                border: none !important;
+                box-shadow: none !important;
+                color: #000000 !important;
+                padding: 0 !important;
+            }
+            .resume-section-title, .timeline-title, h1, h2, h3, h4 {
+                color: #000000 !important;
+                border-color: #000000 !important;
+            }
+            p, span, li, div {
+                color: #222222 !important;
+            }
+            .badge-pill, .project-tags span {
+                border: 1px solid #ccc !important;
+                color: #000 !important;
+                background: transparent !important;
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "ABISHEK BHUSAL",
+      "jobTitle": "WEB & APP DEVELOPER",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "Nepal-Banke"
+      },
+      "url": "https://abishekbhusal.com",
+      "email": "contact:abishekoffical3@gmail.com",
+      "alumniOf": "SHREE MAHENDRA SECONDARY SCHOOL",
+      "knowsAbout": [
+        "Web Development", "App Development", "HTML5", "CSS3", "JavaScript", "Python", "Java", "UI/UX Design", "+Cybersecurity, "REST APIs"
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div class="mouse-glow"></div>
+
+    <canvas id="particles-canvas"></canvas>
+
+    <div id="loader" class="loader-screen">
+        <div class="loader-content">
+            <span class="loader-title">ABISHEK BHUSAL</span>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                ABISHEK BHUSAL<span class="logo-dot">.</span>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="resume.html" class="nav-link active">Resume</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link nav-cta">Let's Talk</a></li>
+            </ul>
+            <a href="auth.html" class="account-nav-link"><i class="fa-regular fa-user"></i><span>Login</span></a>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section" style="min-height: 40vh; padding-top: calc(var(--header-height) + 3rem);">
+            <div class="container">
+                <div class="hero-content" data-aos="fade-up">
+                    <div class="badge-pill">
+                        <i class="fa-solid fa-file-contract text-gradient"></i> Curriculum Vitae
+                    </div>
+                    <h1 class="hero-title">Interactive <span class="text-gradient">Resume</span></h1>
+                    <p class="hero-subtitle">
+                        Comprehensive overview of my professional timeline, education, skill matrix, certifications, and engineering experience.
+                    </p>
+                    <nav aria-label="breadcrumb" style="margin-top: 1rem;">
+                        <ul style="display: flex; gap: 0.75rem; font-family: var(--font-mono); font-size: 0.875rem; color: var(--text-muted);">
+                            <li><a href="index.html" style="color: var(--accent-blue);">Home</a></li>
+                            <li>/</li>
+                            <li style="color: var(--text-white);">Resume</li>
+                        </ul>
+                    </nav>
+
+                    <div class="resume-action-bar">
+                        <a href="assets/Abishek_Bhusal_Resume.pdf" download class="btn btn-primary"><i class="fa-solid fa-download"></i> Download CV</a>
+                        <button onclick="window.print()" class="btn btn-secondary"><i class="fa-solid fa-print"></i> Print Resume</button>
+                        <a href="contact.html" class="btn btn-secondary"><i class="fa-solid fa-briefcase"></i> Hire Me</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="padding: 2rem 0 5rem 0;">
+            <div class="container">
+                <div class="resume-paper" data-aos="fade-up">
+                    
+                    <div class="resume-header-flex">
+                        <div>
+                            <h1 style="font-size: 2.25rem; color: var(--text-white); margin-bottom: 0.25rem;">ABISHEK BHUSAL</h1>
+                            <p style="font-family: var(--font-mono); color: var(--accent-blue); font-size: 1.1rem; margin-bottom: 1rem;">WEB & APP DEVELOPER</p>
+                            <p style="color: var(--text-muted); max-width: 600px; font-size: 0.95rem; line-height: 1.6;">
+                                Dedicated developer skilled in building responsive web applications, mobile user interfaces, and robust server integrations. Passionate about clean code, UI aesthetics, and efficient software architecture.
+                            </p>
+                        </div>
+<img src="assets/images/profile.png" alt="Abishek Bhusal" class="resume-avatar">
+                    </div>
+
+                    <div class="resume-grid-two">
+                        
+                        <div>
+                            <div style="margin-bottom: 2.5rem;">
+                                <h3 class="resume-section-title"><i class="fa-solid fa-bullseye"></i> Career Objective</h3>
+                                <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
+                                    To secure a challenging role in software engineering where I can apply my skills in web and app development, contribute to impactful products, and continue expanding my technical domain.
+                                </p>
+                            </div>
+
+                            <div style="margin-bottom: 2.5rem;">
+                                <h3 class="resume-section-title"><i class="fa-solid fa-user"></i> Personal Info</h3>
+                                <ul class="meta-list">
+                                    <li><i class="fa-solid fa-location-dot"></i> Nepal</li>
+                                    <li><i class="fa-solid fa-envelope"></i> contact@abishekbhusal.com</li>
+                                    <li><i class="fa-solid fa-globe"></i> www.abishekbhusal.com</li>
+                                    <li><i class="fa-solid fa-language"></i> English, Nepali</li>
+                                </ul>
+                            </div>
+
+                            <div style="margin-bottom: 2.5rem;">
+                                <h3 class="resume-section-title"><i class="fa-solid fa-code"></i> Languages</h3>
+                                <div class="project-tags" style="gap: 0.6rem;">
+                                    <span>HTML5</span>
+                                    <span>CSS3</span>
+                                    <span>JavaScript</span>
+                                    <span>Python</span>
+                                    <span>Java</span>
+                                </div>
+                            </div>
+
+                            <div style="margin-bottom: 2.5rem;">
+                                <h3 class="resume-section-title"><i class="fa-solid fa-gears"></i> Core Skills</h3>
+                                <div class="project-tags" style="gap: 0.6rem;">
+                                    <span>Responsive Web Design</span>
+                                    <span>UI/UX Design</span>
+                                    <span>REST API Integration</span>
+                                    <span>Git & GitHub</span>
+                                    <span>Performance Optimization</span>
+                                    <span>Problem Solving</span>
+                                </div>
+                            </div>
+
+                            <div style="margin-bottom: 2.5rem;">
+                                <h3 class="resume-section-title"><i class="fa-solid fa-wrench"></i> Tools</h3>
+                                <div class="project-tags" style="gap: 0.6rem;">
+                                    <span>VS Code</span>
+                                    <span>Figma</span>
+                                    <span>Postman</span>
+                                    <span>Terminal</span>
+                                    <span>GitHub</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="resume-section-title"><i class="fa-solid fa-heart"></i> Interests</h3>
+                                <div class="project-tags" style="gap: 0.6rem;">
+                                    <span>Open Source</span>
+                                    <span>Tech Blogging</span>
+                                    <span>UI Animation</span>
+                                    <span>Problem Solving</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div style="margin-bottom: 3rem;">
+                                <h3 class="resume-section-title"><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+                                <div class="timeline-container">
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2022 - PRESENT</div>
+                                        <h4 class="timeline-title"> Computer Science / IT Study</h4>
+                                        <div class="timeline-subtitle">Higher Educational Institution, Nepal</div>
+                                        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5;">
+                                            Focusing on software engineering principles, algorithm design, web architecture, database management systems, and object-oriented programming.
+                                        </p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2020 - 2022</div>
+                                        <h4 class="timeline-title">SHREE MAHENDRA SECNDARY SCHOOL NARAINAPUR-5 BANKE </h4>
+                                        <div class="timeline-subtitle">Secondary School, Nepal-BANKE</div>
+                                        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5;">
+                                            Completed studies with emphasis on Mathematics, Computer Science, and Physics.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="margin-bottom: 3rem;">
+                                <h3 class="resume-section-title"><i class="fa-solid fa-briefcase"></i> Experience</h3>
+                                <div class="timeline-container">
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2023 - PRESENT</div>
+                                        <h4 class="timeline-title">Freelance Web & App Developer</h4>
+                                        <div class="timeline-subtitle">Self-Employed / Remote</div>
+                                        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 0.5rem;">
+                                            • Architecting custom frontend interfaces and responsive web applications for local and international clients.<br>
+                                            • Integrating RESTful APIs and optimizing website performance for high Lighthouse compliance scores.<br>
+                                            • Designing mobile-friendly wireframes and modern dark glassmorphism user experiences.
+                                        </p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2023 - 2024</div>
+                                        <h4 class="timeline-title">Frontend Developer Project Contributor</h4>
+                                        <div class="timeline-subtitle">Open Source & Team Projects</div>
+                                        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5;">
+                                            • Collaborated with remote developer teams via Git/GitHub version control workflows.<br>
+                                            • Refactored legacy UI components into responsive, reusable modular scripts.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="margin-bottom: 3rem;">
+                                <h3 class="resume-section-title"><i class="fa-solid fa-trophy"></i> Key Achievements</h3>
+                                <ul style="color: var(--text-muted); font-size: 0.9rem; display: flex; flex-direction: column; gap: 0.75rem; padding-left: 1.25rem;">
+                                    <li>Successfully built and deployed over 15+ custom client & personal web projects.</li>
+                                    <li>Achieved top performance ratings for cross-device responsiveness and accessibility.</li>
+                                    <li>Active open-source contributor with clean documentation and version management.</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h3 class="resume-section-title"><i class="fa-solid fa-certificate"></i> Certifications</h3>
+                                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                    <div style="background: rgba(255, 255, 255, 0.03); padding: 1rem; border-radius: var(--border-radius-sm); border: 1px solid var(--bg-glass-border);">
+                                        <div style="font-weight: 600; color: var(--text-white); font-size: 0.95rem;">Full Stack Web Engineering Certificate</div>
+                                        <div style="font-size: 0.85rem; color: var(--accent-blue); font-family: var(--font-mono);">Online Verified Credential</div>
+                                    </div>
+                                    <div style="background: rgba(255, 255, 255, 0.03); padding: 1rem; border-radius: var(--border-radius-sm); border: 1px solid var(--bg-glass-border);">
+                                        <div style="font-weight: 600; color: var(--text-white); font-size: 0.95rem;">JavaScript Algorithms & Data Structures</div>
+                                        <div style="font-size: 0.85rem; color: var(--accent-blue); font-family: var(--font-mono);">Technical Credential</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-card" data-aos="zoom-in">
+                    <div class="cta-content">
+                        <h2 class="cta-title">Interested in my qualifications?</h2>
+                        <p class="cta-subtitle">I am currently available for freelance projects, technical roles, and collaboration.</p>
+                        <a href="contact.html" class="btn btn-primary">Contact Me <i class="fa-solid fa-paper-plane"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        ABISHEK<span class="logo-dot">.</span>
+                    </a>
+                    <p class="footer-tagline">
+                        Web & App Developer crafting high-performance, modern digital products based in Nepal.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://github.com/abishekoffical3-droid" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://tiktok/in/abishekbhusal15" target="_blank" aria-label="TikTok"><i class="fa-brands fa-Tiktok"></i></a>
+                        <a href="https://www.instagram.com/abishek_offical1449" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/abishek_offical1449" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-group">
+                    <div class="footer-links-column">
+                        <h4 class="footer-column-title">Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="resume.html">Resume</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links-column">
+                        <h4 class="footer-column-title">Services</h4>
+                        <ul>
+                            <li><a href="services.html">Web Development</a></li>
+                            <li><a href="services.html">App Development</a></li>
+                            <li><a href="services.html">UI/UX Design</a></li>
+                            <li><a href="services.html">Performance Tuning</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links-column">
+                        <h4 class="footer-column-title">Contact</h4>
+                        <ul>
+                            <li><a href="mailto:contact@abishekbhusal.com" class="js-copy-email" data-email="contact@abishekbhusal.com">Email Me</a></li>
+                            <li><a href="contact.html">Get in Touch</a></li>
+                            <li><span style="color: var(--text-muted); font-size: 0.875rem;">Location: Nepal</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span class="current-year">2026</span> Abishek Bhusal. All Rights Reserved.</p>
+                <p class="designed-by">Designed & Engineered with Precision.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="cursor.js"></script>
+    <script src="animations.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

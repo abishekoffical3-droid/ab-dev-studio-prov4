@@ -1,0 +1,455 @@
+/* ==========================================================================
+   PREMIUM ANIMATIONS STYLESHEET (css/animations.css)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. KEYFRAME DEFINITIONS
+   -------------------------------------------------------------------------- */
+
+/* Loading Screen Animation */
+@keyframes preloaderFadeOut {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Page Transitions */
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pageFadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+}
+
+/* Navbar Reveal */
+@keyframes navbarReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero Content Reveal */
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Background Animated Gradient */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Background Morphing Blob */
+@keyframes blobMorph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+  }
+  33% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    transform: translate(30px, -50px) rotate(120deg) scale(1.08);
+  }
+  66% {
+    border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+    transform: translate(-20px, 20px) rotate(240deg) scale(0.95);
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: translate(0px, 0px) rotate(360deg) scale(1);
+  }
+}
+
+/* Floating Elements */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes floatParticle {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100px) translateX(20px);
+    opacity: 0;
+  }
+}
+
+/* Background & Border Glow */
+@keyframes borderGlowPulse {
+  0%, 100% {
+    border-color: rgba(138, 43, 226, 0.2);
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.1);
+  }
+  50% {
+    border-color: rgba(0, 210, 255, 0.5);
+    box-shadow: 0 0 25px rgba(0, 210, 255, 0.3);
+  }
+}
+
+@keyframes neonGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(0, 210, 255, 0.6)) drop-shadow(0 0 16px rgba(138, 43, 226, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 16px rgba(0, 210, 255, 0.9)) drop-shadow(0 0 28px rgba(138, 43, 226, 0.7));
+  }
+}
+
+/* Button Ripple Effect */
+@keyframes buttonRipple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Card Shine / Sweep Effect */
+@keyframes shineSweep {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
+/* Text Reveal & Typing */
+@keyframes textReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes typingBlink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: var(--accent-blue); }
+}
+
+/* Pulse & Bounce */
+@keyframes subtlePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+
+@keyframes gentleBounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-8px); }
+  60% { transform: translateY(-4px); }
+}
+
+/* Directional Slides */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-40px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translate3d(40px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Rotate */
+@keyframes continuousRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Blur Reveal */
+@keyframes blurIn {
+  from {
+    opacity: 0;
+    filter: blur(12px);
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   2. INTERACTIVE HOVER & UI ANIMATION CLASSES
+   -------------------------------------------------------------------------- */
+
+/* Button Hover Dynamic Glow */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+  transition: none;
+  z-index: -1;
+}
+
+.btn-primary:hover::before {
+  animation: shineSweep 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Ripple Span */
+.ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(0);
+  animation: buttonRipple 0.6s linear;
+  pointer-events: none;
+}
+
+/* Card Hover, Lift & Glassmorphism Animation */
+.glass-card-hover {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, box-shadow;
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-8px) scale(1.01);
+  border-color: rgba(0, 210, 255, 0.35);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px var(--accent-blue-glow);
+}
+
+/* Project Card Image Zoom */
+.project-image-wrapper img {
+  will-change: transform;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card-featured:hover .project-image-wrapper img,
+.project-card:hover .project-image-wrapper img {
+  transform: scale(1.07);
+}
+
+/* Service Card Hover */
+.service-card {
+  will-change: transform, border-color, background;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(138, 43, 226, 0.4);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 25px var(--accent-purple-glow);
+}
+
+/* Social Icon Hover */
+.footer-socials a {
+  will-change: transform, background, border-color;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.footer-socials a:hover {
+  transform: translateY(-4px) scale(1.1);
+}
+
+/* Typing Effect Blink Class */
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: var(--accent-blue);
+  margin-left: 4px;
+  vertical-align: middle;
+  animation: typingBlink 0.8s infinite;
+}
+
+
+/* --------------------------------------------------------------------------
+   3. REUSABLE UTILITY ANIMATION CLASSES
+   -------------------------------------------------------------------------- */
+
+.anim-page-fade-in {
+  animation: pageFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.anim-navbar-reveal {
+  animation: navbarReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.anim-hero-reveal {
+  animation: heroReveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.anim-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.anim-blob {
+  animation: blobMorph 12s ease-in-out infinite;
+}
+
+.anim-border-glow {
+  animation: borderGlowPulse 4s ease-in-out infinite;
+}
+
+.anim-neon {
+  animation: neonGlow 3s ease-in-out infinite;
+}
+
+.anim-pulse {
+  animation: subtlePulse 2.5s ease-in-out infinite;
+}
+
+.anim-bounce {
+  animation: gentleBounce 2s ease infinite;
+}
+
+.anim-slide-up {
+  animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.anim-slide-down {
+  animation: slideDown 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.anim-slide-left {
+  animation: slideLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.anim-slide-right {
+  animation: slideRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.anim-blur-in {
+  animation: blurIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.anim-rotate {
+  animation: continuousRotate 20s linear infinite;
+}
+
+
+/* --------------------------------------------------------------------------
+   4. ACCESSIBILITY & PREFERS-REDUCED-MOTION
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .mouse-glow,
+  .cursor-dot,
+  .cursor-outline {
+    display: none !important;
+  }
+}

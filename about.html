@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Abishek Bhusal - Web & App Developer</title>
+    
+    <meta name="description" content="Learn more about Abishek Bhusal, a passionate Web & App Developer from Nepal. Discover my journey, skills, experience, and vision for crafting digital experiences.">
+    <meta name="keywords" content="Abishek Bhusal, Web Developer Nepal, App Developer Nepal, Full Stack Developer, Software Engineer Portfolio">
+    <meta name="author" content="Abishek Bhusal">
+    <link rel="canonical" href="https://abishekbhusal.com/about.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abishekbhusal.com/about.html">
+    <meta property="og:title" content="About Me | Abishek Bhusal - Web & App Developer">
+    <meta property="og:description" content="Explore the journey, skill set, education, and story of Abishek Bhusal, a Web & App Developer based in Nepal.">
+    <meta property="og:image" content="https://abishekbhusal.com/images/og-about.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://abishekbhusal.com/about.html">
+    <meta name="twitter:title" content="About Me | Abishek Bhusal - Web & App Developer">
+    <meta name="twitter:description" content="Explore the story, education, and skills of Abishek Bhusal, Web & App Developer from Nepal.">
+    <meta name="twitter:image" content="https://abishekbhusal.com/images/og-about.jpg">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="animations.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Abishek Bhusal",
+      "jobTitle": "Web & App Developer",
+      "url": "https://abishekbhusal.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "Nepal"
+      },
+      "sameAs": [
+        "https://github.com/abishekbhusal",
+        "https://linkedin.com/in/abishekbhusal",
+        "https://twitter.com/abishekbhusal"
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div class="mouse-glow"></div>
+
+    <canvas id="particles-canvas"></canvas>
+
+    <div id="loader" class="loader-screen">
+        <div class="loader-content">
+            <span class="loader-title">ABISHEK</span>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                ABISHEK<span class="logo-dot">.</span>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="resume.html" class="nav-link">Resume</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link nav-cta">Let's Talk</a></li>
+            </ul>
+            <a href="auth.html" class="account-nav-link"><i class="fa-regular fa-user"></i><span>Login</span></a>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section" style="min-height: 50vh; padding-top: calc(var(--header-height) + 4rem);">
+            <div class="container">
+                <div class="hero-content" data-aos="fade-up">
+                    <div class="badge-pill">
+                        <i class="fa-solid fa-user text-gradient"></i> Discover My Story
+                    </div>
+                    <h1 class="hero-title">About <span class="text-gradient">Abishek Bhusal</span></h1>
+                    <p class="hero-subtitle">
+                        A passionate Web & App Developer from Nepal building digital products with extreme precision, modern design aesthetics, and scalable engineering.
+                    </p>
+                    <nav aria-label="breadcrumb" style="margin-top: 1rem;">
+                        <ul style="display: flex; gap: 0.75rem; font-family: var(--font-mono); font-size: 0.875rem; color: var(--text-muted);">
+                            <li><a href="index.html" style="color: var(--accent-blue);">Home</a></li>
+                            <li>/</li>
+                            <li style="color: var(--text-white);">About</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-section" style="padding-top: 2rem;">
+            <div class="container">
+                <div class="project-card-featured" data-aos="fade-up">
+                    <div class="project-image-wrapper" style="aspect-ratio: 4/5;">
+                        <img src="assets/images/profile.jpg" alt="Abishek Bhusal" class="project-img" data-cursor="view">
+                    </div>
+                    <div class="project-info">
+                        <span class="section-tag">INTRODUCTION</span>
+                        <h2 class="project-title">Architecting Digital Solutions from Nepal</h2>
+                        <p class="project-description">
+                            Hello! I am <strong>Abishek Bhusal</strong>, a Web & App Developer based in Nepal. I specialize in designing and engineering high-performance web applications, fluid mobile apps, and interactive user experiences.
+                        </p>
+                        <p class="project-description">
+                            My approach combines clean architecture with visually stunning frontend design. Whether crafting responsive user interfaces or integrating robust backend workflows, I prioritize speed, security, and exceptional UX.
+                        </p>
+                        <div class="project-tags" style="margin-bottom: 2rem;">
+                            <span><i class="fa-solid fa-location-dot"></i> Nepal</span>
+                            <span><i class="fa-solid fa-code"></i> Web & Mobile Specialist</span>
+                            <span><i class="fa-solid fa-bolt"></i> Modern UI/UX</span>
+                        </div>
+                        <div class="hero-cta-group">
+                            <a href="contact.html" class="btn btn-primary">Get In Touch <i class="fa-solid fa-paper-plane"></i></a>
+                            <a href="resume.html" class="btn btn-secondary">View Resume <i class="fa-solid fa-file-arrow-down"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stat-number"><span class="counter" data-target="3">0</span>+</div>
+                        <div class="stat-label">Years of Experience</div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stat-number"><span class="counter" data-target="25">0</span>+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stat-number"><span class="counter" data-target="15">0</span>+</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="stat-number"><span class="counter" data-target="99">0</span>%</div>
+                        <div class="stat-label">Code Efficiency & Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">MILESTONES</span>
+                    <h2 class="section-title">Education & Experience Timeline</h2>
+                </div>
+
+                <div class="services-grid" style="grid-template-columns: repeat(2, 1fr); gap: 3rem;">
+                    <div data-aos="fade-right">
+                        <h3 style="margin-bottom: 2rem; display: flex; align-items: center; gap: 0.75rem; font-size: 1.5rem;">
+                            <i class="fa-solid fa-graduation-cap text-gradient"></i> Education
+                        </h3>
+                        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <div class="service-card timeline-item">
+                                <span style="font-family: var(--font-mono); color: var(--accent-blue); font-size: 0.85rem; font-weight: 600;">2021 - Present</span>
+                                <h4 class="service-title" style="margin-top: 0.5rem; font-size: 1.15rem;">Bachelor's in Computer Science / IT</h4>
+                                <p class="service-desc">Focusing on Software Engineering, Data Structures, Algorithms, and Web Development principles.</p>
+                            </div>
+                            <div class="service-card timeline-item">
+                                <span style="font-family: var(--font-mono); color: var(--accent-blue); font-size: 0.85rem; font-weight: 600;">2019 - 2021</span>
+                                <h4 class="service-title" style="margin-top: 0.5rem; font-size: 1.15rem;">Higher Secondary Education (+2 Science)</h4>
+                                <p class="service-desc">Graduated with a focus on Mathematics and Computer Science fundamentals.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-left">
+                        <h3 style="margin-bottom: 2rem; display: flex; align-items: center; gap: 0.75rem; font-size: 1.5rem;">
+                            <i class="fa-solid fa-briefcase text-gradient"></i> Experience
+                        </h3>
+                        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <div class="service-card timeline-item">
+                                <span style="font-family: var(--font-mono); color: var(--accent-purple); font-size: 0.85rem; font-weight: 600;">2023 - Present</span>
+                                <h4 class="service-title" style="margin-top: 0.5rem; font-size: 1.15rem;">Full Stack Developer (Freelance)</h4>
+                                <p class="service-desc">Delivering tailored web apps, REST APIs, and responsive web portals for international & domestic clients.</p>
+                            </div>
+                            <div class="service-card timeline-item">
+                                <span style="font-family: var(--font-mono); color: var(--accent-purple); font-size: 0.85rem; font-weight: 600;">2022 - 2023</span>
+                                <h4 class="service-title" style="margin-top: 0.5rem; font-size: 1.15rem;">Frontend Developer Intern</h4>
+                                <p class="service-desc">Crafted interactive web applications using JavaScript, standard CSS architectures, and modern tools.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-preview-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">TOOLKIT</span>
+                    <h2 class="section-title">Technologies I Use</h2>
+                </div>
+
+                <div class="services-grid" style="grid-template-columns: repeat(4, 1fr);">
+                    <div class="service-card" style="text-align: center; align-items: center;" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="service-icon"><i class="fa-brands fa-html5"></i></div>
+                        <h3 class="service-title" style="font-size: 1.1rem;">HTML5 / CSS3</h3>
+                        <p class="service-desc">Semantic markup, flexbox, grid & modern responsive standards.</p>
+                    </div>
+                    <div class="service-card" style="text-align: center; align-items: center;" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="service-icon"><i class="fa-brands fa-js"></i></div>
+                        <h3 class="service-title" style="font-size: 1.1rem;">JavaScript (ES6+)</h3>
+                        <p class="service-desc">Asynchronous programming, DOM manipulation, APIs & state management.</p>
+                    </div>
+                    <div class="service-card" style="text-align: center; align-items: center;" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="service-icon"><i class="fa-brands fa-react"></i></div>
+                        <h3 class="service-title" style="font-size: 1.1rem;">React / Mobile Dev</h3>
+                        <p class="service-desc">Building scalable single page applications & mobile app screens.</p>
+                    </div>
+                    <div class="service-card" style="text-align: center; align-items: center;" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="service-icon"><i class="fa-brands fa-git-alt"></i></div>
+                        <h3 class="service-title" style="font-size: 1.1rem;">Git & DevOps</h3>
+                        <p class="service-desc">Version control, repository management, and automated deployment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">ADVANTAGE</span>
+                    <h2 class="section-title">Why Work With Me?</h2>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3 class="service-title">Clean & Maintainable Code</h3>
+                        <p class="service-desc">I write modular, documented, and production-ready code that simplifies scalable future development.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-icon"><i class="fa-solid fa-gauge-high"></i></div>
+                        <h3 class="service-title">Speed & Optimization</h3>
+                        <p class="service-desc">Performance is paramount. Fast load times, 60 FPS animations, and responsive execution guaranteed.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-icon"><i class="fa-solid fa-comments"></i></div>
+                        <h3 class="service-title">Clear Communication</h3>
+                        <p class="service-desc">Consistent progress updates, transparency, and collaborative problem-solving from start to finish.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-card" data-aos="zoom-in">
+                    <div class="cta-content">
+                        <h2 class="cta-title">Have a project in mind?</h2>
+                        <p class="cta-subtitle">Let’s collaborate to transform your vision into a remarkable digital product.</p>
+                        <a href="contact.html" class="btn btn-primary">Start a Conversation <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        ABISHEK<span class="logo-dot">.</span>
+                    </a>
+                    <p class="footer-tagline">
+                        Web & App Developer crafting high-performance, modern digital products based in Nepal.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://github.com/abishekoffical3-droid" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://tiktok.com/in/abishekbhusal15" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.facebook.com/abishek.bhusal.680344" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/abishek_offical1449" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-group">
+                    <div class="footer-links-column">
+                        <h4 class="footer-column-title">Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="resume.html">Resume</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links-column">
+                        <h4 class="footer-column-title">Services</h4>
+                        <ul>
+                            <li><a href="services.html">Web Development</a></li>
+                            <li><a href="services.html">App Development</a></li>
+                            <li><a href="services.html">UI/UX Design</a></li>
+                            <li><a href="services.html">Performance Tuning</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links-column">
+                        <h4 class="footer-column-title">Contact</h4>
+                        <ul>
+                            <li><a href="mailto:contact@abishekbhusal.com" class="js-copy-email" data-email="contact@abishekbhusal.com">Email Me</a></li>
+                            <li><a href="contact.html">Get in Touch</a></li>
+                            <li><span style="color: var(--text-muted); font-size: 0.875rem;">Location: Nepal</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span class="current-year">2026</span> Abishek Bhusal. All Rights Reserved.</p>
+                <p class="designed-by">Designed & Engineered with Precision.</p>
+            </div>
+        </div>
+    </footer>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="cursor.js"></script>
+    <script src="animations.js"></script>
+    <script src="main.js"></script>
+   
+</body>
+</html>

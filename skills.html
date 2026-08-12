@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills & Expertise | Abishek Bhusal - Web & App Developer</title>
+    
+    <meta name="description" content="Explore the technical skill set, programming languages, development tools, and core competencies of Abishek Bhusal, Web & App Developer from Nepal.">
+    <meta name="keywords" content="Abishek Bhusal Skills, Web Development Skills, JavaScript, Python, React, UI/UX Design, REST APIs, Git, Full Stack Technologies">
+    <meta name="author" content="Abishek Bhusal">
+    <link rel="canonical" href="https://abishekbhusal.com/skills.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abishekbhusal.com/skills.html">
+    <meta property="og:title" content="Skills & Expertise | Abishek Bhusal - Web & App Developer">
+    <meta property="og:description" content="Discover the complete technical stack, programming proficiency, tools, and soft skills of Abishek Bhusal.">
+    <meta property="og:image" content="https://abishekbhusal.com/images/og-skills.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://abishekbhusal.com/skills.html">
+    <meta name="twitter:title" content="Skills & Expertise | Abishek Bhusal - Web & App Developer">
+    <meta name="twitter:description" content="Discover the complete technical stack, programming proficiency, tools, and soft skills of Abishek Bhusal.">
+    <meta name="twitter:image" content="https://abishekbhusal.com/images/og-skills.jpg">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="animations.css">
+
+    <style>
+        .skill-bar-wrapper {
+            margin-bottom: 1.5rem;
+        }
+        .skill-bar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+        }
+        .skill-bar-title {
+            color: var(--text-white);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .skill-bar-percent {
+            color: var(--accent-blue);
+            font-weight: 600;
+        }
+        .skill-bar-track {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: var(--border-radius-full);
+            overflow: hidden;
+            position: relative;
+        }
+        .skill-bar-fill {
+            height: 100%;
+            border-radius: var(--border-radius-full);
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+            width: 0%;
+            transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .circular-skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .circle-card {
+            background: var(--bg-card);
+            border: 1px solid var(--bg-glass-border);
+            border-radius: var(--border-radius-md);
+            padding: 1.5rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: transform var(--transition-normal), border-color var(--transition-normal);
+        }
+        .circle-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 210, 255, 0.4);
+        }
+        .circle-chart {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1rem;
+        }
+        .circle-chart svg {
+            width: 80px;
+            height: 80px;
+            transform: rotate(-90deg);
+        }
+        .circle-bg {
+            fill: none;
+            stroke: rgba(255, 255, 255, 0.08);
+            stroke-width: 6;
+        }
+        .circle-progress {
+            fill: none;
+            stroke: url(#circleGradient);
+            stroke-width: 6;
+            stroke-linecap: round;
+            stroke-dasharray: 226.19; /* 2 * PI * r (36) */
+            stroke-dashoffset: 226.19;
+            transition: stroke-dashoffset 1.8s ease-in-out;
+        }
+        .circle-value {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-white);
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "name": "Skills & Expertise - Abishek Bhusal",
+      "url": "https://abishekbhusal.com/skills.html",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Abishek Bhusal",
+        "jobTitle": "Web & App Developer",
+        "knowsAbout": [
+          "HTML5", "CSS3", "JavaScript", "Python", "Java",
+          "Responsive Web Design", "UI/UX Design", "Git & GitHub",
+          "REST API", "Performance Optimization", "SEO Basics", "Problem Solving"
+        ]
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <svg style="height: 0; width: 0; position: absolute;" aria-hidden="true">
+        <defs>
+            <linearGradient id="circleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00d2ff" />
+                <stop offset="100%" stop-color="#8a2be2" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div class="mouse-glow"></div>
+
+    <canvas id="particles-canvas"></canvas>
+
+    <div id="loader" class="loader-screen">
+        <div class="loader-content">
+            <span class="loader-title">ABISHEK</span>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                ABISHEK<span class="logo-dot">.</span>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="resume.html" class="nav-link">Resume</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link nav-cta">Let's Talk</a></li>
+            </ul>
+            <a href="auth.html" class="account-nav-link"><i class="fa-regular fa-user"></i><span>Login</span></a>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section" style="min-height: 45vh; padding-top: calc(var(--header-height) + 4rem);">
+            <div class="container">
+                <div class="hero-content" data-aos="fade-up">
+                    <div class="badge-pill">
+                        <i class="fa-solid fa-code text-gradient"></i> Technical Capabilities
+                    </div>
+                    <h1 class="hero-title">Skills & <span class="text-gradient">Expertise</span></h1>
+                    <p class="hero-subtitle">
+                        A comprehensive breakdown of programming languages, frameworks, UI/UX capabilities, software tooling, and core technical competencies.
+                    </p>
+                    <nav aria-label="breadcrumb" style="margin-top: 1rem;">
+                        <ul style="display: flex; gap: 0.75rem; font-family: var(--font-mono); font-size: 0.875rem; color: var(--text-muted);">
+                            <li><a href="index.html" style="color: var(--accent-blue);">Home</a></li>
+                            <li>/</li>
+                            <li style="color: var(--text-white);">Skills</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-section" style="padding-top: 1rem;">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">PROFICIENCY</span>
+                    <h2 class="section-title">Programming Languages</h2>
+                </div>
+
+                <div class="services-grid" style="grid-template-columns: repeat(2, 1fr); gap: 2.5rem;">
+                    <div class="service-card" data-aos="fade-right">
+                        <h3 class="service-title" style="margin-bottom: 1.5rem; font-size: 1.25rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fa-solid fa-terminal text-gradient"></i> Core Languages
+                        </h3>
+
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-header">
+                                <span class="skill-bar-title"><i class="fa-brands fa-html5" style="color: #e34f26;"></i> HTML5</span>
+                                <span class="skill-bar-percent">95%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="95%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-header">
+                                <span class="skill-bar-title"><i class="fa-brands fa-css3-alt" style="color: #1572b6;"></i> CSS3</span>
+                                <span class="skill-bar-percent">90%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="90%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-header">
+                                <span class="skill-bar-title"><i class="fa-brands fa-js" style="color: #f7df1e;"></i> JavaScript</span>
+                                <span class="skill-bar-percent">88%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="88%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-header">
+                                <span class="skill-bar-title"><i class="fa-brands fa-python" style="color: #3776ab;"></i> Python</span>
+                                <span class="skill-bar-percent">82%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="82%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar-wrapper" style="margin-bottom: 0;">
+                            <div class="skill-bar-header">
+                                <span class="skill-bar-title"><i class="fa-brands fa-java" style="color: #007396;"></i> Java</span>
+                                <span class="skill-bar-percent">75%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="75%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-card" data-aos="fade-left">
+                        <h3 class="service-title" style="margin-bottom: 1.5rem; font-size: 1.25rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fa-solid fa-layer-group text-gradient"></i> Specialized Competencies
+                        </h3>
+
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-header">
+                                <span class="skill-bar-title"><i class="fa-solid fa-mobile-screen"></i> Responsive Web Design</span>
+                                <span class="skill-bar-percent">95%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="95%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-header">
+                                <span class="skill-bar-title"><i class="fa-solid fa-network-wired"></i> REST API Integration</span>
+                                <span class="skill-bar-percent">90%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="90%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-header">
+                                <span class="skill-bar-title"><i class="fa-brands fa-git-alt" style="color: #f05032;"></i> Git & GitHub</span>
+                                <span class="skill-bar-percent">85%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="85%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-header">
+                                <span class="skill-bar-title"><i class="fa-solid fa-gauge-high"></i> Performance Optimization</span>
+                                <span class="skill-bar-percent">88%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="88%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar-wrapper" style="margin-bottom: 0;">
+                            <div class="skill-bar-header">
+                                <span class="skill-bar-title"><i class="fa-solid fa-wand-magic-sparkles"></i> UI/UX Design & SEO</span>
+                                <span class="skill-bar-percent">80%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-preview-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">OVERVIEW</span>
+                    <h2 class="section-title">Core Competency Matrix</h2>
+                </div>
+
+                <div class="circular-skills-grid">
+                    <div class="circle-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="circle-chart">
+                            <svg viewBox="0 0 80 80">
+                                <circle class="circle-bg" cx="40" cy="40" r="36"></circle>
+                                <circle class="circle-progress" cx="40" cy="40" r="36" data-percent="95"></circle>
+                            </svg>
+                            <span class="circle-value">95%</span>
+                        </div>
+                        <h4 style="font-size: 0.95rem; color: var(--text-white);">Responsive Design</h4>
+                    </div>
+
+                    <div class="circle-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="circle-chart">
+                            <svg viewBox="0 0 80 80">
+                                <circle class="circle-bg" cx="40" cy="40" r="36"></circle>
+                                <circle class="circle-progress" cx="40" cy="40" r="36" data-percent="82"></circle>
+                            </svg>
+                            <span class="circle-value">82%</span>
+                        </div>
+                        <h4 style="font-size: 0.95rem; color: var(--text-white);">UI/UX Design</h4>
+                    </div>
+
+                    <div class="circle-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="circle-chart">
+                            <svg viewBox="0 0 80 80">
+                                <circle class="circle-bg" cx="40" cy="40" r="36"></circle>
+                                <circle class="circle-progress" cx="40" cy="40" r="36" data-percent="88"></circle>
+                            </svg>
+                            <span class="circle-value">88%</span>
+                        </div>
+                        <h4 style="font-size: 0.95rem; color: var(--text-white);">Git & GitHub</h4>
+                    </div>
+
+                    <div class="circle-card" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="circle-chart">
+                            <svg viewBox="0 0 80 80">
+                                <circle class="circle-bg" cx="40" cy="40" r="36"></circle>
+                                <circle class="circle-progress" cx="40" cy="40" r="36" data-percent="90"></circle>
+                            </svg>
+                            <span class="circle-value">90%</span>
+                        </div>
+                        <h4 style="font-size: 0.95rem; color: var(--text-white);">REST API</h4>
+                    </div>
+
+                    <div class="circle-card" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="circle-chart">
+                            <svg viewBox="0 0 80 80">
+                                <circle class="circle-bg" cx="40" cy="40" r="36"></circle>
+                                <circle class="circle-progress" cx="40" cy="40" r="36" data-percent="88"></circle>
+                            </svg>
+                            <span class="circle-value">88%</span>
+                        </div>
+                        <h4 style="font-size: 0.95rem; color: var(--text-white);">Optimization</h4>
+                    </div>
+
+                    <div class="circle-card" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="circle-chart">
+                            <svg viewBox="0 0 80 80">
+                                <circle class="circle-bg" cx="40" cy="40" r="36"></circle>
+                                <circle class="circle-progress" cx="40" cy="40" r="36" data-percent="78"></circle>
+                            </svg>
+                            <span class="circle-value">78%</span>
+                        </div>
+                        <h4 style="font-size: 0.95rem; color: var(--text-white);">SEO Basics</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-section">
+            <div class="container">
+                <div class="services-grid" style="grid-template-columns: repeat(2, 1fr); gap: 2.5rem;">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon"><i class="fa-solid fa-toolbox"></i></div>
+                        <h3 class="service-title">Development Tools & Ecosystem</h3>
+                        <p class="service-desc" style="margin-bottom: 1.5rem;">The software tools and environments I leverage daily to engineer fast applications.</p>
+                        <div class="project-tags">
+                            <span>VS Code</span>
+                            <span>Figma</span>
+                            <span>Postman</span>
+                            <span>GitHub Actions</span>
+                            <span>NPM / Yarn</span>
+                            <span>Vite</span>
+                            <span>Webpack</span>
+                            <span>Terminal / Bash</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
+                        <h3 class="service-title">Professional & Soft Skills</h3>
+                        <p class="service-desc" style="margin-bottom: 1.5rem;">Non-technical capabilities essential for driving effective software projects and client relations.</p>
+                        <div class="project-tags">
+                            <span>Problem Solving</span>
+                            <span>Agile Methodologies</span>
+                            <span>Time Management</span>
+                            <span>Client Communication</span>
+                            <span>Team Collaboration</span>
+                            <span>Adaptability</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-preview-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">VERIFICATION</span>
+                    <h2 class="section-title">Certifications & Achievements</h2>
+                </div>
+
+                <div class="services-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <span style="font-family: var(--font-mono); color: var(--accent-blue); font-size: 0.85rem;">2024</span>
+                        <h3 class="service-title" style="font-size: 1.15rem; margin-top: 0.5rem;">Full Stack Web Development</h3>
+                        <p class="service-desc">Comprehensive certification covering HTML5, CSS3, JavaScript ES6+, React, Node.js, and DB architecture.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                        <span style="font-family: var(--font-mono); color: var(--accent-blue); font-size: 0.85rem;">2023</span>
+                        <h3 class="service-title" style="font-size: 1.15rem; margin-top: 0.5rem;">Responsive Web Design Certification</h3>
+                        <p class="service-desc">Advanced techniques in mobile-first layout design, flexbox, CSS grid systems, and cross-device testing.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                        <span style="font-family: var(--font-mono); color: var(--accent-blue); font-size: 0.85rem;">2023</span>
+                        <h3 class="service-title" style="font-size: 1.15rem; margin-top: 0.5rem;">JavaScript Algorithms & Data Structures</h3>
+                        <p class="service-desc">Algorithmic logic, computational complexity, object-oriented programming, and dynamic data handling.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-card" data-aos="zoom-in">
+                    <div class="cta-content">
+                        <h2 class="cta-title">Ready to build something exceptional?</h2>
+                        <p class="cta-subtitle">Let's combine these technical skills to create high-impact software for your business.</p>
+                        <a href="contact.html" class="btn btn-primary">Hire Abishek <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        ABISHEK<span class="logo-dot">.</span>
+                    </a>
+                    <p class="footer-tagline">
+                        Web & App Developer crafting high-performance, modern digital products based in Nepal.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://github.com/abishekbhusal" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://linkedin.com/in/abishekbhusal" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com/abishekbhusal" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://instagram.com/abishekbhusal" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-group">
+                    <div class="footer-links-column">
+                        <h4 class="footer-column-title">Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="resume.html">Resume</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links-column">
+                        <h4 class="footer-column-title">Services</h4>
+                        <ul>
+                            <li><a href="services.html">Web Development</a></li>
+                            <li><a href="services.html">App Development</a></li>
+                            <li><a href="services.html">UI/UX Design</a></li>
+                            <li><a href="services.html">Performance Tuning</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links-column">
+                        <h4 class="footer-column-title">Contact</h4>
+                        <ul>
+                            <li><a href="mailto:contact@abishekbhusal.com" class="js-copy-email" data-email="contact@abishekbhusal.com">Email Me</a></li>
+                            <li><a href="contact.html">Get in Touch</a></li>
+                            <li><span style="color: var(--text-muted); font-size: 0.875rem;">Location: Nepal</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span class="current-year">2026</span> Abishek Bhusal. All Rights Reserved.</p>
+                <p class="designed-by">Designed & Engineered with Precision.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Fill Progress Bars on Scroll
+            const fillBars = () => {
+                const bars = document.querySelectorAll('.skill-bar-fill');
+                bars.forEach(bar => {
+                    const rect = bar.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                        bar.style.width = bar.getAttribute('data-width');
+                    }
+                });
+            };
+
+            // Animate Circular Charts
+            const fillCircles = () => {
+                const circles = document.querySelectorAll('.circle-progress');
+                circles.forEach(circle => {
+                    const rect = circle.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                        const percent = circle.getAttribute('data-percent');
+                        const circumference = 226.19; // 2 * PI * 36
+                        const offset = circumference - (percent / 100) * circumference;
+                        circle.style.strokeDashoffset = offset;
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', () => {
+                fillBars();
+                fillCircles();
+            });
+
+            // Initial Trigger
+            fillBars();
+            fillCircles();
+        });
+    </script>
+
+    <script src="main.js"></script>
+    <script src="animations.js"></script>
+    <script src="cursor.js"></script>
+    <script src="particles.js"></script>
+</body>
+</html>

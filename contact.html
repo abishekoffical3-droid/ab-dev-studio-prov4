@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | ABISHEK BHUSAL - Web & App Developer</title>
+    
+    <meta name="description" content="Get in touch with Abishek Bhusal, Web & App Developer based in Nepal. Available for freelance projects, consultations, and full-time engineering opportunities.">
+    <meta name="keywords" content="Contact ABISHEK BHUSAL, Hire Web Developer Nepal, Hire App Developer, Software Developer Contact, ABISHEK BHUSAL Email, ABISHEK BHUSAL Phone">
+    <meta name="author" content="ABISHEK BHUSAL">
+    <link rel="canonical" href="https://abishekbhusal.com/contact.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abishekbhusal.com/contact.html">
+    <meta property="og:title" content="Contact Me | ABISHEK BHUSAL - Web & App Developer">
+    <meta property="og:description" content="Have a project in mind or want to collaborate? Contact Abishek Bhusal today via email, phone, or direct inquiry form.">
+    <meta property="og:image" content="https://abishekbhusal.com/images/og-contact.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://abishekbhusal.com/contact.html">
+    <meta name="twitter:title" content="Contact Me | Abishek Bhusal - Web & App Developer">
+    <meta name="twitter:description" content="Have a project in mind or want to collaborate? Contact Abishek Bhusal today via email, phone, or direct inquiry form.">
+    <meta name="twitter:image" content="https://abishekbhusal.com/images/og-contact.jpg">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="animations.css">
+
+    <style>
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .contact-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+        }
+
+        .contact-card {
+            background: var(--bg-card);
+            border: 1px solid var(--bg-glass-border);
+            border-radius: var(--border-radius-md);
+            padding: 1.5rem;
+            backdrop-filter: blur(10px);
+            transition: transform var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal);
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 210, 255, 0.4);
+            box-shadow: 0 10px 25px rgba(0, 210, 255, 0.1);
+        }
+
+        .contact-card-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: var(--border-radius-sm);
+            background: rgba(0, 210, 255, 0.1);
+            border: 1px solid rgba(0, 210, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-blue);
+            font-size: 1.25rem;
+        }
+
+        .contact-card-title {
+            font-size: 1rem;
+            color: var(--text-white);
+            font-weight: 600;
+        }
+
+        .contact-card-value {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            word-break: break-word;
+        }
+
+        .contact-card-value a {
+            color: var(--text-muted);
+            transition: color var(--transition-fast);
+        }
+
+        .contact-card-value a:hover {
+            color: var(--accent-blue);
+        }
+
+        .contact-form-container {
+            background: var(--bg-card);
+            border: 1px solid var(--bg-glass-border);
+            border-radius: var(--border-radius-lg);
+            padding: 2.5rem;
+            backdrop-filter: blur(12px);
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1.25rem;
+            position: relative;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+        }
+
+        .form-label {
+            font-size: 0.875rem;
+            color: var(--text-white);
+            font-family: var(--font-mono);
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .form-label span {
+            color: var(--accent-purple);
+        }
+
+        .form-input, .form-textarea {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--bg-glass-border);
+            border-radius: var(--border-radius-md);
+            padding: 0.85rem 1.15rem;
+            color: var(--text-white);
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 15px rgba(0, 210, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .form-input.invalid, .form-textarea.invalid {
+            border-color: #ff4757;
+            box-shadow: 0 0 10px rgba(255, 71, 87, 0.2);
+        }
+
+        .form-input.valid, .form-textarea.valid {
+            border-color: #2ed573;
+        }
+
+        .error-message {
+            color: #ff4757;
+            font-size: 0.75rem;
+            font-family: var(--font-mono);
+            display: none;
+            margin-top: 0.25rem;
+        }
+
+        .form-status {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: var(--border-radius-md);
+            font-size: 0.9rem;
+            font-family: var(--font-mono);
+            display: none;
+            text-align: center;
+        }
+
+        .form-status.success {
+            display: block;
+            background: rgba(46, 213, 115, 0.15);
+            border: 1px solid rgba(46, 213, 115, 0.4);
+            color: #2ed573;
+        }
+
+        .form-status.error {
+            display: block;
+            background: rgba(255, 71, 87, 0.15);
+            border: 1px solid rgba(255, 71, 87, 0.4);
+            color: #ff4757;
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-card-item {
+            background: var(--bg-card);
+            border: 1px solid var(--bg-glass-border);
+            border-radius: var(--border-radius-md);
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--text-white);
+            backdrop-filter: blur(8px);
+            transition: transform var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
+        }
+
+        .social-card-item:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent-blue);
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--accent-blue);
+        }
+
+        .social-card-item i {
+            font-size: 1.25rem;
+        }
+
+        .social-card-item span {
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 380px;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--bg-glass-border);
+            margin-top: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            filter: none;
+        }
+
+        .btn-loading {
+            position: relative;
+            pointer-events: none;
+            opacity: 0.8;
+        }
+
+        .btn-loading .btn-text {
+            visibility: hidden;
+        }
+
+        .btn-loading::after {
+            content: "";
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            top: 50%;
+            left: 50%;
+            margin-top: -9px;
+            margin-left: -9px;
+            border: 2px solid transparent;
+            border-top-color: #ffffff;
+            border-radius: 50%;
+            animation: button-spinner 0.8s linear infinite;
+        }
+
+        @keyframes button-spinner {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 992px) {
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .contact-cards-grid, .form-row {
+                grid-template-columns: 1fr;
+            }
+            .contact-form-container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact Abishek Bhusal",
+      "description": "Contact information and direct message portal for Abishek Bhusal, Web & App Developer.",
+      "url": "https://abishekbhusal.com/contact.html",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Abishek Bhusal",
+        "jobTitle": "Web & App Developer",
+        "email": "contact@abishekbhusal.com",
+        "telephone": "+9779746581648",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "Nepal-banke"
+        }
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div class="mouse-glow"></div>
+
+    <canvas id="particles-canvas"></canvas>
+
+    <div id="loader" class="loader-screen">
+        <div class="loader-content">
+            <span class="loader-title">ABISHEK</span>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                ABISHEK<span class="logo-dot">.</span>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="resume.html" class="nav-link">Resume</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link active nav-cta">Let's Talk</a></li>
+            </ul>
+            <a href="auth.html" class="account-nav-link"><i class="fa-regular fa-user"></i><span>Login</span></a>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section" style="min-height: 40vh; padding-top: calc(var(--header-height) + 3rem);">
+            <div class="container">
+                <div class="hero-content" data-aos="fade-up">
+                    <div class="badge-pill">
+                        <i class="fa-solid fa-paper-plane text-gradient"></i> Get In Touch
+                    </div>
+                    <h1 class="hero-title">Let's Build <span class="text-gradient">Together</span></h1>
+                    <p class="hero-subtitle">
+                        Have a project in mind, need technical assistance, or want to explore collaboration opportunities? Send a message and let's turn your vision into reality.
+                    </p>
+                    <nav aria-label="breadcrumb" style="margin-top: 1rem;">
+                        <ul style="display: flex; gap: 0.75rem; font-family: var(--font-mono); font-size: 0.875rem; color: var(--text-muted);">
+                            <li><a href="index.html" style="color: var(--accent-blue);">Home</a></li>
+                            <li>/</li>
+                            <li style="color: var(--text-white);">Contact</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <section style="padding: 1rem 0 4rem 0;">
+            <div class="container">
+                <div class="contact-wrapper">
+                    
+                    <div data-aos="fade-right">
+                        <div class="section-header" style="text-align: left; margin-bottom: 1.5rem;">
+                            <span class="section-tag">DIRECT CHANNELS</span>
+                            <h2 class="section-title" style="font-size: 1.8rem;">Reach Out Directly</h2>
+                        </div>
+
+                        <div class="contact-cards-grid">
+                            <div class="contact-card">
+                                <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="contact-card-title">Email Me</div>
+                                <div class="contact-card-value">
+                                    <a href="mailto:contact@abishekoffical3.com">contact@abishekoffical3.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-card">
+                                <div class="contact-card-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div class="contact-card-title">Call / Text</div>
+                                <div class="contact-card-value">
+                                    <a href="tel:+977974658648">+977 9746581648</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-card">
+                                <div class="contact-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="contact-card-title">Location</div>
+                                <div class="contact-card-value">
+                                    Nepal (Available for Remote Worldwide)
+                                </div>
+                            </div>
+
+                            <div class="contact-card">
+                                <div class="contact-card-icon"><i class="fa-solid fa-clock"></i></div>
+                                <div class="contact-card-title">Working Hours</div>
+                                <div class="contact-card-value">
+                                    Mon - Sat: 09:00 AM - 08:00 PM (NPT)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 2.5rem;">
+                            <h3 style="font-size: 1.1rem; color: var(--text-white); font-family: var(--font-sans); margin-bottom: 1rem;">Connect via Social Media</h3>
+                            <div class="social-grid">
+                                <a href="https://github.com/abishekoffical3-droid" target="_blank" class="social-card-item">
+                                    <i class="fa-brands fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                                <a href="https://linkedin.com/in/abishekbhusal" target="_blank" class="social-card-item">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="https://www.facebook.com/abishek.bhusal.680344" target="_blank" class="social-card-item">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                    <span>Facebook</span>
+                                </a>
+                                <a href="https://www.instagram.com/abishek_offical1449" target="_blank" class="social-card-item">
+                                    <i class="fa-brands fa-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                                <a href="https://wa.me/974651648" target="_blank" class="social-card-item">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                    <span>WhatsApp</span>
+                                </a>
+                                <a href="https://t.me/abishekbhusal" target="_blank" class="social-card-item">
+                                    <i class="fa-brands fa-telegram"></i>
+                                    <span>Telegram</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container" data-aos="fade-left">
+                        <h3 style="font-size: 1.5rem; color: var(--text-white); margin-bottom: 0.5rem;">Send a Message</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem;">Fill out the form below and I will get back to you within 24 hours.</p>
+
+                        <form
+    id="contactForm"
+    action="https://formspree.io/f/mjybkkqg"
+    method="POST">
+
+    <input type="hidden" name="_subject" value="New Portfolio Contact Message">
+			
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fullName" class="form-label">Full Name <span>*</span></label>
+                                    <input type="text" id="fullName" name="fullName" class="form-input" placeholder="John Doe" required>
+                                    <span class="error-message" id="nameError">Please enter your full name.</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email Address <span>*</span></label>
+                                    <input type="email" id="email" name="email" class="form-input" placeholder="abcde.com" required>
+                                    <span class="error-message" id="emailError">Please enter a valid email address.</span>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" class="form-input" placeholder="+977 9800000000">
+                                    <span class="error-message" id="phoneError">Please enter a valid phone number.</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="subject" class="form-label">Subject <span>*</span></label>
+                                    <input type="text" id="subject" name="subject" class="form-input" placeholder="Project Inquiry" required>
+                                    <span class="error-message" id="subjectError">Please enter a subject.</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Your Message <span>*</span></label>
+                                <textarea id="message" name="message" rows="5" class="form-textarea" placeholder="Describe your project, goals, or questions here..." required></textarea>
+                                <span class="error-message" id="messageError">Please enter your message (minimum 10 characters).</span>
+                            </div>
+
+                            <button type="submit" id="submitBtn" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 0.5rem;">
+                                <span class="btn-text"><i class="fa-solid fa-paper-plane"></i> SEND A MESSAGE</span>
+                            </button>
+
+                            <div id="formStatus" class="form-status"></div>
+                        </form>
+                    </div>
+
+                </div>
+
+                <div class="map-container" data-aos="fade-up">
+                    <iframe src="https://www.google.com/maps/embed?pb=!3m2!1sen!2snp!4v1786124393212!5m2!1sen!2snp!6m8!1m7!1sBmkbYmt9o2ftOF4v9WD45Q!2m2!1d27.92070548661941!2d81.8351696402407!3f149.43108905566655!4f5.046309087459562!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-preview-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">QUICK HELP</span>
+                    <h2 class="section-title">Before You Reach Out</h2>
+                </div>
+
+                <div class="services-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="service-title" style="font-size: 1.1rem;"><i class="fa-solid fa-bolt text-gradient"></i> Typical Response Time</h3>
+                        <p class="service-desc" style="margin-top: 0.5rem;">I respond to all email and form inquiries within 12 to 24 hours on business days.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="service-title" style="font-size: 1.1rem;"><i class="fa-solid fa-earth-americas text-gradient"></i> Global Time Zones</h3>
+                        <p class="service-desc" style="margin-top: 0.5rem;">Based in Nepal (GMT+5:45), but fully equipped to accommodate client calls across US, EU, and Asia-Pacific time zones.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                        <h3 class="service-title" style="font-size: 1.1rem;"><i class="fa-solid fa-file-contract text-gradient"></i> Project Quotations</h3>
+                        <p class="service-desc" style="margin-top: 0.5rem;">To speed up project estimation, please include details like project goals, timeline, and budget expectation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-card" data-aos="zoom-in">
+                    <div class="cta-content">
+                        <h2 class="cta-title">Ready to hire Abishek Bhusal?</h2>
+                        <p class="cta-subtitle">Available for full-time roles, freelance projects, and long-term contract engineering.</p>
+                        <a href="mailto:contact@abishekbhusal.com" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Direct Email</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        ABISHEK<span class="logo-dot">.</span>
+                    </a>
+                    <p class="footer-tagline">
+                        Web & App Developer crafting high-performance, modern digital products based in Nepal.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://github.com/abishekbhusal" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://linkedin.com/in/abishekbhusal" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com/abishekbhusal" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://instagram.com/abishekbhusal" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+					<a
+href="https://tiktok.com/abishekbhusal15" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-group">
+                    <div class="footer-links-column">
+                        <h4 class="footer-column-title">Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="resume.html">Resume</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links-column">
+                        <h4 class="footer-column-title">Services</h4>
+                        <ul>
+                            <li><a href="services.html">Web Development</a></li>
+                            <li><a href="services.html">App Development</a></li>
+                            <li><a href="services.html">UI/UX Design</a></li>
+                            <li><a href="services.html">Performance Tuning</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links-column">
+                        <h4 class="footer-column-title">Contact</h4>
+                        <ul>
+                            <li><a href="mailto:contact@abishekoffical3.com" class="js-copy-email" data-email="contact@abishekoffcal3.com">Email Me</a></li>
+                            <li><a href="contact.html">Get in Touch</a></li>
+                            <li><span style="color: var(--text-muted); font-size: 0.875rem;">Location: Nepal-Banke</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span class="current-year">2026</span> Abishek Bhusal. All Rights Reserved.</p>
+                <p class="designed-by">Designed & Engineered with Precision.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const contactForm = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const formStatus = document.getElementById('formStatus');
+
+            const nameInput = document.getElementById('fullName');
+            const emailInput = document.getElementById('email');
+            const phoneInput = document.getElementById('phone');
+            const subjectInput = document.getElementById('subject');
+            const messageInput = document.getElementById('message');
+
+            const nameError = document.getElementById('nameError');
+            const emailError = document.getElementById('emailError');
+            const phoneError = document.getElementById('phoneError');
+            const subjectError = document.getElementById('subjectError');
+            const messageError = document.getElementById('messageError');
+
+            const validateEmail = (email) => {
+                return String(email)
+                    .toLowerCase()
+                    .match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/);
+            };
+
+            const validatePhone = (phone) => {
+                if (!phone.trim()) return true; // Optional field
+                return phone.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/);
+            };
+
+            const validateField = (input, errorElem, validationFn) => {
+                const isValid = validationFn(input.value);
+                if (!isValid) {
+                    input.classList.add('invalid');
+                    input.classList.remove('valid');
+                    errorElem.style.display = 'block';
+                    return false;
+                } else {
+                    input.classList.remove('invalid');
+                    input.classList.add('valid');
+                    errorElem.style.display = 'none';
+                    return true;
+                }
+            };
+
+            // Real-time Input Listeners
+            nameInput.addEventListener('input', () => validateField(nameInput, nameError, val => val.trim().length > 0));
+            emailInput.addEventListener('input', () => validateField(emailInput, emailError, val => validateEmail(val)));
+            phoneInput.addEventListener('input', () => validateField(phoneInput, phoneError, val => validatePhone(val)));
+            subjectInput.addEventListener('input', () => validateField(subjectInput, subjectError, val => val.trim().length > 0));
+            messageInput.addEventListener('input', () => validateField(messageInput, messageError, val => val.trim().length >= 10));
+
+            // Form Submit Event
+            contactForm.addEventListener('submit', (e) => {
+                
+
+                const isNameValid = validateField(nameInput, nameError, val => val.trim().length > 0);
+                const isEmailValid = validateField(emailInput, emailError, val => validateEmail(val));
+                const isPhoneValid = validateField(phoneInput, phoneError, val => validatePhone(val));
+                const isSubjectValid = validateField(subjectInput, subjectError, val => val.trim().length > 0);
+                const isMessageValid = validateField(messageInput, messageError, val => val.trim().length >= 10);
+
+                if (isNameValid && isEmailValid && isPhoneValid && isSubjectValid && isMessageValid) {
+                    // Show Loading Spinner State
+                    submitBtn.classList.add('btn-loading');
+                    formStatus.className = 'form-status';
+                    formStatus.style.display = 'none';
+
+                    submitBtn.classList.add('btn-loading');
+                        
+                        // Reset Form
+                        contactForm.reset();
+                        document.querySelectorAll('.form-input, .form-textarea').forEach(el => el.classList.remove('valid'));
+                    }, 1800);
+                } else {
+                    formStatus.className = 'form-status error';
+                    formStatus.textContent = 'Please fill out all required fields correctly before submitting.';
+                }
+            });
+        });
+    </script>
+
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="cursor.js"></script>
+    <script src="animations.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

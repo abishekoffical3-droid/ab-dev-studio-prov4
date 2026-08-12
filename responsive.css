@@ -1,0 +1,397 @@
+/* ==========================================================================
+   RESPONSIVE DESIGN STYLESHEET (css/responsive.css)
+   ========================================================================== */
+
+/* ==========================================================================
+   1920px and above (Ultra Large Displays / 4K / TV Screens)
+   ========================================================================== */
+@media screen and (min-width: 1920px) {
+  :root {
+    --container-max: 1600px;
+  }
+
+  html {
+    font-size: 18px;
+  }
+
+  .hero-title {
+    font-size: 5.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.4rem;
+    max-width: 850px;
+  }
+
+  .stats-grid {
+    gap: 3rem;
+  }
+
+  .service-card {
+    padding: 3.5rem 2.5rem;
+  }
+}
+
+/* ==========================================================================
+   1600px Breakpoint (Large Desktop Monitors)
+   ========================================================================== */
+@media screen and (max-width: 1600px) {
+  :root {
+    --container-max: 1400px;
+  }
+}
+
+/* ==========================================================================
+   1440px Breakpoint (Standard Desktop / Large Laptops)
+   ========================================================================== */
+@media screen and (max-width: 1440px) {
+  :root {
+    --container-max: 1200px;
+  }
+
+  .hero-title {
+    font-size: 4.5rem;
+  }
+
+  .project-card-featured {
+    gap: 3rem;
+  }
+}
+
+/* ==========================================================================
+   1366px Breakpoint (Common Laptop Resolution)
+   ========================================================================== */
+@media screen and (max-width: 1366px) {
+  :root {
+    --container-max: 1140px;
+  }
+
+  .section-title {
+    font-size: 2.75rem;
+  }
+
+  .cta-card {
+    padding: 4rem 2rem;
+  }
+}
+
+/* ==========================================================================
+   1200px Breakpoint (Desktops & Small Laptops)
+   ========================================================================== */
+@media screen and (max-width: 1200px) {
+  :root {
+    --container-max: 960px;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .project-card-featured,
+  .project-reverse {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .project-reverse .project-image-wrapper {
+    order: 0;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr 1.5fr;
+  }
+}
+
+/* ==========================================================================
+   1024px Breakpoint (Tablets Landscape & IPad Pro)
+   ========================================================================== */
+@media screen and (max-width: 1024px) {
+  :root {
+    --container-max: 900px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .footer-brand {
+    max-width: 500px;
+  }
+
+  .hero-video {
+    object-position: center center;
+  }
+}
+
+/* ==========================================================================
+   992px Breakpoint (Medium Devices & Tablets Landscape)
+   ========================================================================== */
+@media screen and (max-width: 992px) {
+  :root {
+    --container-max: 720px;
+  }
+
+  /* Hamburger Navigation Menu Overlay */
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 400px;
+    height: 100vh;
+    background-color: rgba(7, 7, 9, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-left: 1px solid var(--bg-glass-border);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: right var(--transition-normal);
+    z-index: 1000;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-link {
+    font-size: 1.25rem;
+  }
+
+  .hero-title {
+    font-size: 3.25rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .featured-section,
+  .services-preview-section,
+  .cta-section {
+    padding: 5rem 0;
+  }
+}
+
+/* ==========================================================================
+   768px Breakpoint (Tablets Portrait & Mobile Large)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  :root {
+    --container-max: 540px;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .hero-section {
+    padding-top: calc(var(--header-height) + 1rem);
+  }
+
+  .hero-title {
+    font-size: 2.75rem;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-links-group {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .mouse-glow,
+  .cursor-dot,
+  .cursor-outline {
+    display: none !important; /* Disable heavy cursor trails on touch devices */
+  }
+
+  html {
+    cursor: auto !important;
+  }
+  
+  a, button {
+    cursor: pointer !important;
+  }
+}
+
+/* ==========================================================================
+   576px Breakpoint (Mobile Phones Portrait)
+   ========================================================================== */
+@media screen and (max-width: 576px) {
+  :root {
+    --container-max: 100%;
+  }
+
+  .badge-pill {
+    font-size: 0.775rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 2.25rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .stat-card {
+    padding: 1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--bg-glass-border);
+    border-radius: var(--border-radius-md);
+  }
+
+  .project-card-featured {
+    padding: 1.5rem;
+  }
+
+  .cta-card {
+    padding: 3rem 1.25rem;
+  }
+
+  .cta-title {
+    font-size: 1.75rem;
+  }
+
+  .cta-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .footer-links-group {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   480px Breakpoint (Small Smartphones)
+   ========================================================================== */
+@media screen and (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .project-title {
+    font-size: 1.35rem;
+  }
+
+  .btn {
+    padding: 0.85rem 1.5rem;
+    font-size: 0.875rem;
+  }
+
+  .nav-menu {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* ==========================================================================
+   375px Breakpoint (Extra Small Smartphones)
+   ========================================================================== */
+@media screen and (max-width: 375px) {
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .stat-number {
+    font-size: 2.25rem;
+  }
+
+  .project-card-featured {
+    padding: 1.25rem;
+  }
+
+  .project-tags span {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.6rem;
+  }
+}
+
+/* ==========================================================================
+   320px Breakpoint (Very Narrow Screens)
+   ========================================================================== */
+@media screen and (max-width: 320px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.875rem;
+  }
+
+  .badge-pill {
+    font-size: 0.7rem;
+  }
+
+  .section-tag {
+    font-size: 0.75rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

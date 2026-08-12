@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects & Works | Abishek Bhusal - Web & App Developer</title>
+    
+    <meta name="description" content="Explore the portfolio of Abishek Bhusal, featuring web applications, mobile apps, UI/UX designs, and AI projects engineered with modern technologies.">
+    <meta name="keywords" content="Abishek Bhusal Projects, Web Development Portfolio, App Development, React Projects, Full Stack Applications, Nepal Developer">
+    <meta name="author" content="Abishek Bhusal">
+    <link rel="canonical" href="https://abishekbhusal.com/projects.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abishekbhusal.com/projects.html">
+    <meta property="og:title" content="Projects & Works | Abishek Bhusal - Web & App Developer">
+    <meta property="og:description" content="Explore a curated showcase of web, mobile, and AI projects developed by Abishek Bhusal.">
+    <meta property="og:image" content="https://abishekbhusal.com/images/og-projects.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://abishekbhusal.com/projects.html">
+    <meta name="twitter:title" content="Projects & Works | Abishek Bhusal - Web & App Developer">
+    <meta name="twitter:description" content="Explore a curated showcase of web, mobile, and AI projects developed by Abishek Bhusal.">
+    <meta name="twitter:image" content="https://abishekbhusal.com/images/og-projects.jpg">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="animations.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Projects Showcase - Abishek Bhusal",
+      "description": "Portfolio of web applications, mobile apps, and digital solutions created by Abishek Bhusal.",
+      "url": "https://abishekbhusal.com/projects.html",
+      "author": {
+        "@type": "Person",
+        "name": "Abishek Bhusal"
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div class="mouse-glow"></div>
+
+    <canvas id="particles-canvas"></canvas>
+
+    <div id="loader" class="loader-screen">
+        <div class="loader-content">
+            <span class="loader-title">ABISHEK</span>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                ABISHEK<span class="logo-dot">.</span>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="resume.html" class="nav-link">Resume</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link nav-cta">Let's Talk</a></li>
+            </ul>
+            <a href="auth.html" class="account-nav-link"><i class="fa-regular fa-user"></i><span>Login</span></a>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section" style="min-height: 45vh; padding-top: calc(var(--header-height) + 4rem);">
+            <div class="container">
+                <div class="hero-content" data-aos="fade-up">
+                    <div class="badge-pill">
+                        <i class="fa-solid fa-laptop-code text-gradient"></i> Portfolio Showcase
+                    </div>
+                    <h1 class="hero-title">Featured <span class="text-gradient">Projects</span></h1>
+                    <p class="hero-subtitle">
+                        A collection of digital products, scalable web apps, mobile solutions, and intelligent platforms engineered with precision.
+                    </p>
+                    <nav aria-label="breadcrumb" style="margin-top: 1rem;">
+                        <ul style="display: flex; gap: 0.75rem; font-family: var(--font-mono); font-size: 0.875rem; color: var(--text-muted);">
+                            <li><a href="index.html" style="color: var(--accent-blue);">Home</a></li>
+                            <li>/</li>
+                            <li style="color: var(--text-white);">Projects</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <section style="padding: 1rem 0 3rem 0;">
+            <div class="container">
+                <div style="max-width: 600px; margin: 0 auto 2.5rem auto;" data-aos="fade-up">
+                    <div style="position: relative; display: flex; align-items: center;">
+                        <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 1.25rem; color: var(--text-muted); font-size: 1.1rem; pointer-events: none;"></i>
+                        <input type="text" id="project-search" placeholder="Search projects by name, keyword, or tech..." style="width: 100%; padding: 1rem 1.25rem 1rem 3.25rem; background: var(--bg-card); border: 1px solid var(--bg-glass-border); border-radius: var(--border-radius-full); color: var(--text-white); font-family: var(--font-sans); font-size: 1rem; backdrop-filter: blur(10px); outline: none; transition: border-color var(--transition-normal), box-shadow var(--transition-normal);">
+                    </div>
+                </div>
+
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem;" data-aos="fade-up" data-aos-delay="100">
+                    <button class="filter-btn active" data-filter="all" style="padding: 0.6rem 1.25rem; border-radius: var(--border-radius-full); border: 1px solid var(--bg-glass-border); background: var(--bg-card); color: var(--text-white); font-size: 0.875rem; font-family: var(--font-mono); cursor: pointer; transition: all var(--transition-normal);">All Projects</button>
+                    <button class="filter-btn" data-filter="web" style="padding: 0.6rem 1.25rem; border-radius: var(--border-radius-full); border: 1px solid var(--bg-glass-border); background: var(--bg-card); color: var(--text-white); font-size: 0.875rem; font-family: var(--font-mono); cursor: pointer; transition: all var(--transition-normal);">Web Development</button>
+                    <button class="filter-btn" data-filter="app" style="padding: 0.6rem 1.25rem; border-radius: var(--border-radius-full); border: 1px solid var(--bg-glass-border); background: var(--bg-card); color: var(--text-white); font-size: 0.875rem; font-family: var(--font-mono); cursor: pointer; transition: all var(--transition-normal);">App Development</button>
+                    <button class="filter-btn" data-filter="uiux" style="padding: 0.6rem 1.25rem; border-radius: var(--border-radius-full); border: 1px solid var(--bg-glass-border); background: var(--bg-card); color: var(--text-white); font-size: 0.875rem; font-family: var(--font-mono); cursor: pointer; transition: all var(--transition-normal);">UI/UX Design</button>
+                    <button class="filter-btn" data-filter="ai" style="padding: 0.6rem 1.25rem; border-radius: var(--border-radius-full); border: 1px solid var(--bg-glass-border); background: var(--bg-card); color: var(--text-white); font-size: 0.875rem; font-family: var(--font-mono); cursor: pointer; transition: all var(--transition-normal);">AI Projects</button>
+                    <button class="filter-btn" data-filter="personal" style="padding: 0.6rem 1.25rem; border-radius: var(--border-radius-full); border: 1px solid var(--bg-glass-border); background: var(--bg-card); color: var(--text-white); font-size: 0.875rem; font-family: var(--font-mono); cursor: pointer; transition: all var(--transition-normal);">Personal Projects</button>
+                    <button class="filter-btn" data-filter="school" style="padding: 0.6rem 1.25rem; border-radius: var(--border-radius-full); border: 1px solid var(--bg-glass-border); background: var(--bg-card); color: var(--text-white); font-size: 0.875rem; font-family: var(--font-mono); cursor: pointer; transition: all var(--transition-normal);">School Projects</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-section" style="padding-top: 1rem;">
+            <div class="container">
+                <div class="services-grid" id="projects-container" style="grid-template-columns: repeat(3, 1fr);">
+                    
+                    <div class="project-card project-item glass-card-hover" data-category="web personal" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-image-wrapper" style="position: relative; aspect-ratio: 16/9; overflow: hidden; border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;">
+                            <img src="assets/images/project-ecommerce.jpg" alt="Next-Gen E-Commerce Platform" class="project-img" data-cursor="view" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span style="position: absolute; top: 1rem; right: 1rem; background: rgba(16, 185, 129, 0.2); border: 1px solid rgba(16, 185, 129, 0.4); color: #10b981; padding: 0.25rem 0.75rem; border-radius: var(--border-radius-full); font-size: 0.75rem; font-family: var(--font-mono); font-weight: 600;">LIVE</span>
+                        </div>
+                        <div style="padding: 1.5rem; display: flex; flex-direction: column; gap: 0.875rem; flex-grow: 1;">
+                            <h3 class="project-title" style="font-size: 1.25rem; margin: 0;">Next-Gen E-Commerce Platform</h3>
+                            <p class="project-description" style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">A full-stack e-commerce web application with real-time payment processing, order tracking, and custom admin portal.</p>
+                            <div class="project-tags" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto;">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                                <span>Stripe</span>
+                            </div>
+                            <div style="display: flex; gap: 0.75rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--bg-glass-border);">
+                                <a href="https://github.com/abishekbhusal" target="_blank" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.8rem; flex: 1;"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="#" target="_blank" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem; flex: 1;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card project-item glass-card-hover" data-category="app ai" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-image-wrapper" style="position: relative; aspect-ratio: 16/9; overflow: hidden; border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;">
+                            <img src="assets/images/project-ai-health.jpg" alt="AI Health Assistant Mobile App" class="project-img" data-cursor="view" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span style="position: absolute; top: 1rem; right: 1rem; background: rgba(0, 210, 255, 0.2); border: 1px solid rgba(0, 210, 255, 0.4); color: var(--accent-blue); padding: 0.25rem 0.75rem; border-radius: var(--border-radius-full); font-size: 0.75rem; font-family: var(--font-mono); font-weight: 600;">COMPLETED</span>
+                        </div>
+                        <div style="padding: 1.5rem; display: flex; flex-direction: column; gap: 0.875rem; flex-grow: 1;">
+                            <h3 class="project-title" style="font-size: 1.25rem; margin: 0;">AI Health & Wellness Companion</h3>
+                            <p class="project-description" style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">Cross-platform mobile application powered by AI for personalized symptom analysis and daily fitness tracking.</p>
+                            <div class="project-tags" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto;">
+                                <span>React Native</span>
+                                <span>Python</span>
+                                <span>FastAPI</span>
+                                <span>OpenAI</span>
+                            </div>
+                            <div style="display: flex; gap: 0.75rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--bg-glass-border);">
+                                <a href="https://github.com/abishekbhusal" target="_blank" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.8rem; flex: 1;"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="#" target="_blank" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem; flex: 1;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card project-item glass-card-hover" data-category="uiux web" data-aos="fade-up" data-aos-delay="300">
+                        <div class="project-image-wrapper" style="position: relative; aspect-ratio: 16/9; overflow: hidden; border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;">
+                            <img src="assets/images/project-banking-ui.jpg" alt="Neobank Financial Dashboard" class="project-img" data-cursor="view" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span style="position: absolute; top: 1rem; right: 1rem; background: rgba(138, 43, 226, 0.2); border: 1px solid rgba(138, 43, 226, 0.4); color: var(--accent-purple); padding: 0.25rem 0.75rem; border-radius: var(--border-radius-full); font-size: 0.75rem; font-family: var(--font-mono); font-weight: 600;">DESIGN</span>
+                        </div>
+                        <div style="padding: 1.5rem; display: flex; flex-direction: column; gap: 0.875rem; flex-grow: 1;">
+                            <h3 class="project-title" style="font-size: 1.25rem; margin: 0;">Neobank Financial Dashboard</h3>
+                            <p class="project-description" style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">Dark glassmorphism UI/UX design system crafted for a next-generation fintech analytics dashboard.</p>
+                            <div class="project-tags" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto;">
+                                <span>Figma</span>
+                                <span>UI/UX</span>
+                                <span>Design System</span>
+                                <span>Prototyping</span>
+                            </div>
+                            <div style="display: flex; gap: 0.75rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--bg-glass-border);">
+                                <a href="#" target="_blank" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.8rem; flex: 1;"><i class="fa-brands fa-figma"></i> Figma</a>
+                                <a href="#" target="_blank" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem; flex: 1;"><i class="fa-solid fa-eye"></i> Preview</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card project-item glass-card-hover" data-category="web school" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-image-wrapper" style="position: relative; aspect-ratio: 16/9; overflow: hidden; border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;">
+                            <img src="assets/images/project-task-flow.jpg" alt="Smart Workflow Automation Platform" class="project-img" data-cursor="view" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span style="position: absolute; top: 1rem; right: 1rem; background: rgba(16, 185, 129, 0.2); border: 1px solid rgba(16, 185, 129, 0.4); color: #10b981; padding: 0.25rem 0.75rem; border-radius: var(--border-radius-full); font-size: 0.75rem; font-family: var(--font-mono); font-weight: 600;">LIVE</span>
+                        </div>
+                        <div style="padding: 1.5rem; display: flex; flex-direction: column; gap: 0.875rem; flex-grow: 1;">
+                            <h3 class="project-title" style="font-size: 1.25rem; margin: 0;">Smart Workflow Automation</h3>
+                            <p class="project-description" style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">Academic capstone project focusing on team productivity, Kanban management, and automated trigger pipelines.</p>
+                            <div class="project-tags" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto;">
+                                <span>JavaScript</span>
+                                <span>Node.js</span>
+                                <span>PostgreSQL</span>
+                                <span>Docker</span>
+                            </div>
+                            <div style="display: flex; gap: 0.75rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--bg-glass-border);">
+                                <a href="https://github.com/abishekbhusal" target="_blank" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.8rem; flex: 1;"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="#" target="_blank" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem; flex: 1;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card project-item glass-card-hover" data-category="app web personal" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-image-wrapper" style="position: relative; aspect-ratio: 16/9; overflow: hidden; border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;">
+                            <img src="assets/images/project-chat-app.jpg" alt="Real-Time Messenger Application" class="project-img" data-cursor="view" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span style="position: absolute; top: 1rem; right: 1rem; background: rgba(0, 210, 255, 0.2); border: 1px solid rgba(0, 210, 255, 0.4); color: var(--accent-blue); padding: 0.25rem 0.75rem; border-radius: var(--border-radius-full); font-size: 0.75rem; font-family: var(--font-mono); font-weight: 600;">COMPLETED</span>
+                        </div>
+                        <div style="padding: 1.5rem; display: flex; flex-direction: column; gap: 0.875rem; flex-grow: 1;">
+                            <h3 class="project-title" style="font-size: 1.25rem; margin: 0;">Encrypted Real-Time Messenger</h3>
+                            <p class="project-description" style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">End-to-end web and mobile chat application featuring WebSockets, instant media sharing, and room encryption.</p>
+                            <div class="project-tags" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto;">
+                                <span>Socket.io</span>
+                                <span>React</span>
+                                <span>Express</span>
+                                <span>Tailwind</span>
+                            </div>
+                            <div style="display: flex; gap: 0.75rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--bg-glass-border);">
+                                <a href="https://github.com/abishekbhusal" target="_blank" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.8rem; flex: 1;"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="#" target="_blank" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem; flex: 1;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card project-item glass-card-hover" data-category="ai personal" data-aos="fade-up" data-aos-delay="300">
+                        <div class="project-image-wrapper" style="position: relative; aspect-ratio: 16/9; overflow: hidden; border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;">
+                            <img src="assets/images/project-ai-code.jpg" alt="AI Code Review & Documentation Tool" class="project-img" data-cursor="view" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span style="position: absolute; top: 1rem; right: 1rem; background: rgba(16, 185, 129, 0.2); border: 1px solid rgba(16, 185, 129, 0.4); color: #10b981; padding: 0.25rem 0.75rem; border-radius: var(--border-radius-full); font-size: 0.75rem; font-family: var(--font-mono); font-weight: 600;">LIVE</span>
+                        </div>
+                        <div style="padding: 1.5rem; display: flex; flex-direction: column; gap: 0.875rem; flex-grow: 1;">
+                            <h3 class="project-title" style="font-size: 1.25rem; margin: 0;">AI Code Review & Docs Tool</h3>
+                            <p class="project-description" style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">Automated developer CLI tool and web portal that scans codebases and generates comprehensive markdown documentation.</p>
+                            <div class="project-tags" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto;">
+                                <span>Python</span>
+                                <span>LLMs</span>
+                                <span>FastAPI</span>
+                                <span>Vue.js</span>
+                            </div>
+                            <div style="display: flex; gap: 0.75rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--bg-glass-border);">
+                                <a href="https://github.com/abishekbhusal" target="_blank" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.8rem; flex: 1;"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="#" target="_blank" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem; flex: 1;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div style="text-align: center; margin-top: 3.5rem;" data-aos="fade-up">
+                    <button id="load-more-btn" class="btn btn-secondary" style="padding: 0.875rem 2.5rem;"><i class="fa-solid fa-arrows-rotate"></i> Load More Projects</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-card" data-aos="zoom-in">
+                    <div class="cta-content">
+                        <h2 class="cta-title">Need a Custom Software Solution?</h2>
+                        <p class="cta-subtitle">I build tailored web and mobile applications designed to scale with your business requirements.</p>
+                        <a href="contact.html" class="btn btn-primary">Discuss Your Project <i class="fa-solid fa-paper-plane"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        ABISHEK<span class="logo-dot">.</span>
+                    </a>
+                    <p class="footer-tagline">
+                        Web & App Developer crafting high-performance, modern digital products based in Nepal.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://github.com/abishekbhusal" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://linkedin.com/in/abishekbhusal" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com/abishekbhusal" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://instagram.com/abishekbhusal" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-group">
+                    <div class="footer-links-column">
+                        <h4 class="footer-column-title">Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="resume.html">Resume</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links-column">
+                        <h4 class="footer-column-title">Services</h4>
+                        <ul>
+                            <li><a href="services.html">Web Development</a></li>
+                            <li><a href="services.html">App Development</a></li>
+                            <li><a href="services.html">UI/UX Design</a></li>
+                            <li><a href="services.html">Performance Tuning</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links-column">
+                        <h4 class="footer-column-title">Contact</h4>
+                        <ul>
+                            <li><a href="mailto:contact@abishekbhusal.com" class="js-copy-email" data-email="contact@abishekbhusal.com">Email Me</a></li>
+                            <li><a href="contact.html">Get in Touch</a></li>
+                            <li><span style="color: var(--text-muted); font-size: 0.875rem;">Location: Nepal</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span class="current-year">2026</span> Abishek Bhusal. All Rights Reserved.</p>
+                <p class="designed-by">Designed & Engineered with Precision.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const projectItems = document.querySelectorAll('.project-item');
+            const searchInput = document.getElementById('project-search');
+
+            function filterProjects() {
+                const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+                const searchQuery = searchInput.value.toLowerCase().trim();
+
+                projectItems.forEach(item => {
+                    const categories = item.getAttribute('data-category').split(' ');
+                    const title = item.querySelector('.project-title').textContent.toLowerCase();
+                    const desc = item.querySelector('.project-description').textContent.toLowerCase();
+                    const tags = Array.from(item.querySelectorAll('.project-tags span')).map(s => s.textContent.toLowerCase()).join(' ');
+
+                    const matchesCategory = activeFilter === 'all' || categories.includes(activeFilter);
+                    const matchesSearch = title.includes(searchQuery) || desc.includes(searchQuery) || tags.includes(searchQuery);
+
+                    if (matchesCategory && matchesSearch) {
+                        item.style.display = 'flex';
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1)';
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.95)';
+                        setTimeout(() => {
+                            if (!matchesCategory || !matchesSearch) {
+                                item.style.display = 'none';
+                            }
+                        }, 200);
+                    }
+                });
+            }
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => {
+                        b.classList.remove('active');
+                        b.style.background = 'var(--bg-card)';
+                        b.style.borderColor = 'var(--bg-glass-border)';
+                    });
+                    btn.classList.add('active');
+                    btn.style.background = 'linear-gradient(135deg, var(--accent-blue), var(--accent-purple))';
+                    btn.style.borderColor = 'transparent';
+                    filterProjects();
+                });
+            });
+
+            if (searchInput) {
+                searchInput.addEventListener('input', filterProjects);
+            }
+        });
+    </script>
+
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="cursor.js"></script>
+    <script src="animations.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

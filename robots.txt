@@ -1,0 +1,20 @@
+# robots.txt for Abishek Bhusal Portfolio
+# https://abishekbhusal.com
+# Owner: Abishek Bhusal - Web & App Developer
+
+User-agent: *
+Allow: /
+
+# Prevent search engines from indexing error pages and administrative/private files
+Disallow: /404.html
+Disallow: /admin/
+Disallow: /private/
+
+# Explicitly allow crawling of asset directories for proper rendering (SEO Best Practice)
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /assets/
+
+# Sitemap location
+Sitemap: https://abishekbhusal.com/sitemap.xml

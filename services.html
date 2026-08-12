@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services & Solutions | Abishek Bhusal - Web & App Developer</title>
+    
+    <meta name="description" content="Professional web and application development services by Abishek Bhusal. Offering custom website development, UI/UX design, web applications, maintenance, and performance optimization.">
+    <meta name="keywords" content="Abishek Bhusal Services, Web Development Nepal, App Development, Website Redesign, UI/UX Design, Performance Optimization, API Integration">
+    <meta name="author" content="Abishek Bhusal">
+    <link rel="canonical" href="https://abishekbhusal.com/services.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abishekbhusal.com/services.html">
+    <meta property="og:title" content="Services & Solutions | Abishek Bhusal - Web & App Developer">
+    <meta property="og:description" content="Custom web & app engineering solutions tailored for business growth, performance, and outstanding visual design.">
+    <meta property="og:image" content="https://abishekbhusal.com/images/og-services.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://abishekbhusal.com/services.html">
+    <meta name="twitter:title" content="Services & Solutions | Abishek Bhusal - Web & App Developer">
+    <meta name="twitter:description" content="Custom web & app engineering solutions tailored for business growth, performance, and outstanding visual design.">
+    <meta name="twitter:image" content="https://abishekbhusal.com/images/og-services.jpg">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="animations.css">
+
+    <style>
+        .faq-accordion {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--bg-glass-border);
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            transition: border-color var(--transition-normal);
+        }
+        .faq-item:hover {
+            border-color: rgba(0, 210, 255, 0.3);
+        }
+        .faq-question {
+            padding: 1.25rem 1.5rem;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: none;
+            border: none;
+            color: var(--text-white);
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            font-family: var(--font-sans);
+        }
+        .faq-icon {
+            color: var(--accent-blue);
+            transition: transform var(--transition-normal);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 0 1.5rem 1.25rem 1.5rem;
+        }
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .process-card {
+            background: var(--bg-card);
+            border: 1px solid var(--bg-glass-border);
+            border-radius: var(--border-radius-md);
+            padding: 1.5rem;
+            position: relative;
+            backdrop-filter: blur(10px);
+            transition: transform var(--transition-normal), border-color var(--transition-normal);
+        }
+        .process-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-purple);
+        }
+        .process-number {
+            font-family: var(--font-mono);
+            font-size: 2rem;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.1);
+            position: absolute;
+            top: 1rem;
+            right: 1.25rem;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        @media (max-width: 992px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Web and Application Development",
+      "provider": {
+        "@type": "Person",
+        "name": "Abishek Bhusal"
+      },
+      "areaServed": "Worldwide",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Development Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Website Development"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Application Development"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "UI/UX Design & Optimization"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div class="mouse-glow"></div>
+
+    <canvas id="particles-canvas"></canvas>
+
+    <div id="loader" class="loader-screen">
+        <div class="loader-content">
+            <span class="loader-title">ABISHEK</span>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                ABISHEK<span class="logo-dot">.</span>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link active">Services</a></li>
+                <li class="nav-item"><a href="resume.html" class="nav-link">Resume</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link nav-cta">Let's Talk</a></li>
+            </ul>
+            <a href="auth.html" class="account-nav-link"><i class="fa-regular fa-user"></i><span>Login</span></a>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section" style="min-height: 45vh; padding-top: calc(var(--header-height) + 4rem);">
+            <div class="container">
+                <div class="hero-content" data-aos="fade-up">
+                    <div class="badge-pill">
+                        <i class="fa-solid fa-gears text-gradient"></i> Tailored Solutions
+                    </div>
+                    <h1 class="hero-title">Services & <span class="text-gradient">Solutions</span></h1>
+                    <p class="hero-subtitle">
+                        End-to-end web engineering, mobile app development, UI/UX designing, performance tuning, and technical maintenance designed to elevate digital brands.
+                    </p>
+                    <nav aria-label="breadcrumb" style="margin-top: 1rem;">
+                        <ul style="display: flex; gap: 0.75rem; font-family: var(--font-mono); font-size: 0.875rem; color: var(--text-muted);">
+                            <li><a href="index.html" style="color: var(--accent-blue);">Home</a></li>
+                            <li>/</li>
+                            <li style="color: var(--text-white);">Services</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-section" style="padding-top: 1rem;">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">WHAT I OFFER</span>
+                    <h2 class="section-title">Comprehensive Development Services</h2>
+                </div>
+
+                <div class="services-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    
+                    <div class="service-card glass-card-hover" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
+                        <h3 class="service-title">Website Development</h3>
+                        <p class="service-desc">Custom, responsive websites built using modern standards for speed, accessibility, and high conversion rates.</p>
+                        <div class="project-tags" style="margin-top: 1rem;">
+                            <span>Business</span>
+                            <span>Portfolio</span>
+                            <span>School</span>
+                            <span>Landing Pages</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card glass-card-hover" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                        <h3 class="service-title">Application Development</h3>
+                        <p class="service-desc">Feature-rich web applications and cross-platform mobile apps engineered with clean state management.</p>
+                        <div class="project-tags" style="margin-top: 1rem;">
+                            <span>React Native</span>
+                            <span>Web Apps</span>
+                            <span>SaaS</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card glass-card-hover" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+                        <h3 class="service-title">UI/UX & Prototyping</h3>
+                        <p class="service-desc">User-centered interface designs, wireframes, and interactive prototypes with dark mode and glassmorphism styling.</p>
+                        <div class="project-tags" style="margin-top: 1rem;">
+                            <span>Figma</span>
+                            <span>Wireframing</span>
+                            <span>Design Systems</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card glass-card-hover" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <h3 class="service-title">Website Redesign</h3>
+                        <p class="service-desc">Revitalize outdated web portals with fresh modern visual design, faster load times, and improved UI architectures.</p>
+                        <div class="project-tags" style="margin-top: 1rem;">
+                            <span>Modernization</span>
+                            <span>UI Overhaul</span>
+                            <span>UX Boost</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card glass-card-hover" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-icon"><i class="fa-solid fa-gauge-high"></i></div>
+                        <h3 class="service-title">Performance Optimization</h3>
+                        <p class="service-desc">Maximize page load speeds, reduce asset size, optimize core web vitals, and achieve smooth 60 FPS animations.</p>
+                        <div class="project-tags" style="margin-top: 1rem;">
+                            <span>Core Web Vitals</span>
+                            <span>60 FPS</span>
+                            <span>Code Splitting</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card glass-card-hover" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-icon"><i class="fa-solid fa-network-wired"></i></div>
+                        <h3 class="service-title">API Integration & Backends</h3>
+                        <p class="service-desc">Connecting RESTful APIs, third-party payment gateways, authentication systems, and database pipelines.</p>
+                        <div class="project-tags" style="margin-top: 1rem;">
+                            <span>RESTful APIs</span>
+                            <span>Node.js</span>
+                            <span>Payment Gateways</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card glass-card-hover" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <h3 class="service-title">SEO & Technical Basics</h3>
+                        <p class="service-desc">Semantic HTML5 tagging, Schema.org markup, Open Graph integration, and structured data for high search ranking.</p>
+                        <div class="project-tags" style="margin-top: 1rem;">
+                            <span>Schema.org</span>
+                            <span>Meta Tags</span>
+                            <span>Semantic Markup</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card glass-card-hover" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3 class="service-title">Website Maintenance</h3>
+                        <p class="service-desc">Ongoing technical support, dependency updates, security audits, backups, and structural health checks.</p>
+                        <div class="project-tags" style="margin-top: 1rem;">
+                            <span>Bug Fixes</span>
+                            <span>Security Updates</span>
+                            <span>24/7 Monitoring</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card glass-card-hover" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-icon"><i class="fa-solid fa-bug-slash"></i></div>
+                        <h3 class="service-title">Bug Fixing & Refactoring</h3>
+                        <p class="service-desc">Debugging tricky code errors, fixing responsive layout issues, and refactoring messy codebases into clean architecture.</p>
+                        <div class="project-tags" style="margin-top: 1rem;">
+                            <span>Debugging</span>
+                            <span>Clean Code</span>
+                            <span>Cross-Browser</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="services-preview-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">WORKFLOW</span>
+                    <h2 class="section-title">Step-by-Step Project Process</h2>
+                </div>
+
+                <div class="process-grid">
+                    <div class="process-card" data-aos="fade-up" data-aos-delay="100">
+                        <span class="process-number">01</span>
+                        <h3 class="service-title" style="font-size: 1.15rem; margin-top: 0.5rem;">Requirement Discussion</h3>
+                        <p class="service-desc">Understanding your project vision, target audience, technical scope, and core business objectives.</p>
+                    </div>
+
+                    <div class="process-card" data-aos="fade-up" data-aos-delay="200">
+                        <span class="process-number">02</span>
+                        <h3 class="service-title" style="font-size: 1.15rem; margin-top: 0.5rem;">Planning & Architecture</h3>
+                        <p class="service-desc">Defining the tech stack, content hierarchy, system architecture, database schema, and project milestones.</p>
+                    </div>
+
+                    <div class="process-card" data-aos="fade-up" data-aos-delay="300">
+                        <span class="process-number">03</span>
+                        <h3 class="service-title" style="font-size: 1.15rem; margin-top: 0.5rem;">UI/UX Design</h3>
+                        <p class="service-desc">Crafting wireframes and visual design mockups prioritizing accessibility, aesthetics, and user journey.</p>
+                    </div>
+
+                    <div class="process-card" data-aos="fade-up" data-aos-delay="400">
+                        <span class="process-number">04</span>
+                        <h3 class="service-title" style="font-size: 1.15rem; margin-top: 0.5rem;">Development</h3>
+                        <p class="service-desc">Writing clean, modular, and performant code for frontend and backend integrations with version control.</p>
+                    </div>
+
+                    <div class="process-card" data-aos="fade-up" data-aos-delay="500">
+                        <span class="process-number">05</span>
+                        <h3 class="service-title" style="font-size: 1.15rem; margin-top: 0.5rem;">Testing & QA</h3>
+                        <p class="service-desc">Rigorous cross-browser testing, responsive validation, speed optimization, and security audits.</p>
+                    </div>
+
+                    <div class="process-card" data-aos="fade-up" data-aos-delay="600">
+                        <span class="process-number">06</span>
+                        <h3 class="service-title" style="font-size: 1.15rem; margin-top: 0.5rem;">Deployment & Launch</h3>
+                        <p class="service-desc">Setting up production hosting, configuring domain SSL certificates, and going live smoothly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">INVESTMENT</span>
+                    <h2 class="section-title">Starting Rates & Tiers</h2>
+                </div>
+
+                <div class="pricing-grid">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100" style="display: flex; flex-direction: column;">
+                        <span style="font-family: var(--font-mono); color: var(--accent-blue); font-size: 0.85rem;">BASIC</span>
+                        <h3 class="service-title" style="font-size: 1.5rem; margin-top: 0.5rem;">Essential Web Package</h3>
+                        <p class="service-desc" style="margin-bottom: 1.5rem;">Ideal for landing pages, portfolio sites, or small business presentations.</p>
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--text-white); margin-bottom: 1.5rem; font-family: var(--font-mono);">
+                            Starting from <span class="text-gradient">$199</span>
+                        </div>
+                        <ul style="color: var(--text-muted); font-size: 0.9rem; display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem;">
+                            <li><i class="fa-solid fa-check text-gradient"></i> Up to 3 Responsive Pages</li>
+                            <li><i class="fa-solid fa-check text-gradient"></i> Fast Glassmorphic Design</li>
+                            <li><i class="fa-solid fa-check text-gradient"></i> Contact Form Integration</li>
+                            <li><i class="fa-solid fa-check text-gradient"></i> Basic SEO Optimization</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-secondary" style="margin-top: auto; text-align: center;">Select Basic Plan</a>
+                    </div>
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200" style="display: flex; flex-direction: column; border-color: var(--accent-blue); box-shadow: 0 0 30px rgba(0, 210, 255, 0.2);">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-family: var(--font-mono); color: var(--accent-blue); font-size: 0.85rem;">POPULAR</span>
+                            <span style="background: rgba(0, 210, 255, 0.2); border: 1px solid rgba(0, 210, 255, 0.4); color: var(--accent-blue); padding: 0.2rem 0.6rem; border-radius: var(--border-radius-full); font-size: 0.75rem; font-family: var(--font-mono);">RECOMMENDED</span>
+                        </div>
+                        <h3 class="service-title" style="font-size: 1.5rem; margin-top: 0.5rem;">Business Application</h3>
+                        <p class="service-desc" style="margin-bottom: 1.5rem;">Complete Web or Mobile App solutions with dynamic data integration.</p>
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--text-white); margin-bottom: 1.5rem; font-family: var(--font-mono);">
+                            Starting from <span class="text-gradient">$499</span>
+                        </div>
+                        <ul style="color: var(--text-muted); font-size: 0.9rem; display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem;">
+                            <li><i class="fa-solid fa-check text-gradient"></i> Up to 10 Pages or App Screens</li>
+                            <li><i class="fa-solid fa-check text-gradient"></i> Dynamic REST API Integration</li>
+                            <li><i class="fa-solid fa-check text-gradient"></i> Custom CMS / Admin Panel</li>
+                            <li><i class="fa-solid fa-check text-gradient"></i> 30-Day Post Launch Support</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary" style="margin-top: auto; text-align: center;">Select Business Plan</a>
+                    </div>
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="300" style="display: flex; flex-direction: column;">
+                        <span style="font-family: var(--font-mono); color: var(--accent-purple); font-size: 0.85rem;">CUSTOM</span>
+                        <h3 class="service-title" style="font-size: 1.5rem; margin-top: 0.5rem;">Enterprise & SaaS</h3>
+                        <p class="service-desc" style="margin-bottom: 1.5rem;">Bespoke complex platforms, AI feature integration, and microservices.</p>
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--text-white); margin-bottom: 1.5rem; font-family: var(--font-mono);">
+                            Custom Quote
+                        </div>
+                        <ul style="color: var(--text-muted); font-size: 0.9rem; display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem;">
+                            <li><i class="fa-solid fa-check text-gradient"></i> Unlimited Scalable Pages</li>
+                            <li><i class="fa-solid fa-check text-gradient"></i> AI / ML API Capabilities</li>
+                            <li><i class="fa-solid fa-check text-gradient"></i> Dedicated DevOps Pipeline</li>
+                            <li><i class="fa-solid fa-check text-gradient"></i> Priority Support Contract</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-secondary" style="margin-top: auto; text-align: center;">Request Custom Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-preview-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">QUESTIONS</span>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                </div>
+
+                <div class="faq-accordion" data-aos="fade-up">
+                    <div class="faq-item active">
+                        <button class="faq-question">
+                            What technologies do you specialize in?
+                            <i class="fa-solid fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            I specialize in HTML5, CSS3, ES6+ JavaScript, React, Node.js, Python, REST APIs, and modern CSS architecture with custom glassmorphism and animation systems.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How long does a typical website development project take?
+                            <i class="fa-solid fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            Timeline depends on the scope. A standard portfolio or business landing page usually takes 1 to 2 weeks, while larger web applications may take 3 to 6 weeks.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Will my website work seamlessly on mobile phones and tablets?
+                            <i class="fa-solid fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            Absolutely. Every project I deliver is built mobile-first, ensuring 100% responsiveness across desktop, laptop, tablet, and smartphone screens.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Do you offer post-launch technical support and maintenance?
+                            <i class="fa-solid fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            Yes, I provide post-launch support with all packages, alongside ongoing maintenance plans for updates, backups, security patches, and feature expansion.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-card" data-aos="zoom-in">
+                    <div class="cta-content">
+                        <h2 class="cta-title">Ready to launch your project?</h2>
+                        <p class="cta-subtitle">Get in touch today for a free project consultation and detailed price quote.</p>
+                        <a href="contact.html" class="btn btn-primary">Start Your Project <i class="fa-solid fa-paper-plane"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        ABISHEK<span class="logo-dot">.</span>
+                    </a>
+                    <p class="footer-tagline">
+                        Web & App Developer crafting high-performance, modern digital products based in Nepal.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://github.com/abishekbhusal" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://linkedin.com/in/abishekbhusal" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com/abishekbhusal" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://instagram.com/abishekbhusal" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-group">
+                    <div class="footer-links-column">
+                        <h4 class="footer-column-title">Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="resume.html">Resume</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links-column">
+                        <h4 class="footer-column-title">Services</h4>
+                        <ul>
+                            <li><a href="services.html">Web Development</a></li>
+                            <li><a href="services.html">App Development</a></li>
+                            <li><a href="services.html">UI/UX Design</a></li>
+                            <li><a href="services.html">Performance Tuning</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links-column">
+                        <h4 class="footer-column-title">Contact</h4>
+                        <ul>
+                            <li><a href="mailto:contact@abishekbhusal.com" class="js-copy-email" data-email="contact@abishekbhusal.com">Email Me</a></li>
+                            <li><a href="contact.html">Get in Touch</a></li>
+                            <li><span style="color: var(--text-muted); font-size: 0.875rem;">Location: Nepal</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span class="current-year">2026</span> Abishek Bhusal. All Rights Reserved.</p>
+                <p class="designed-by">Designed & Engineered with Precision.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all FAQs
+                    faqItems.forEach(i => i.classList.remove('active'));
+
+                    // Toggle current FAQ
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script src="main.js"></script>
+    <script src="animations.js"></script>
+    <script src="cursor.js"></script>
+    <script src="particles.js"></script>
+</body>
+</html>
